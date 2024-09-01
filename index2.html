@@ -402,6 +402,48 @@
                   <h3 class="card-title">Competitor Analysis</h3>
                   <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
                 </div>
+                <!-- /.col -->
+                <div class="col-md-12">
+                  <p class="text-center">
+                    <strong>Pricing Models VS Industry Standard</strong>
+                  </p>
+
+                  <div class="progress-group">
+                    Flat Rate Pricing
+                    <span class="float-right" id="competitor-price-flat"><b>P35000</b></span>
+                    <div class="progress progress-sm">
+                      <div class="progress-bar bg-primary" style="width: 35%" id="competitor-price-flat-progressbar"></div>
+                    </div>
+                  </div>
+                  <!-- /.progress-group -->
+
+                  <div class="progress-group">
+                    Variable Pricing
+                    <span class="float-right" id="competitor-price-variable"><b>P30000</b></span>
+                    <div class="progress progress-sm">
+                      <div class="progress-bar bg-danger" style="width: 30%" id="competitor-price-variable-progressbar"></div>
+                    </div>
+                  </div>
+
+                  <!-- /.progress-group -->
+                  <div class="progress-group">
+                    <span class="progress-text">Bundled Packages</span>
+                    <span class="float-right"id="competitor-price-bundle"><b>P25000</b></span>
+                    <div class="progress progress-sm">
+                      <div class="progress-bar bg-success" style="width: 25%" id="competitor-price-bundle-progressbar"></div>
+                    </div>
+                  </div>
+
+                  <!-- /.progress-group -->
+                  <div class="progress-group">
+                    Industry Standard
+                    <span class="float-right"><b>P100000</b></span>
+                    <div class="progress progress-sm">
+                      <div class="progress-bar bg-info" style="width: 100%" id="competitor-price-standard-progressbar"></div>
+                    </div>
+                  </div>
+                  <!-- /.progress-group -->
+                </div>
                 <div class="card-body">
                   <div id="competitor-analysis-chart" style="height: 400px"></div>
                 </div>
@@ -682,7 +724,7 @@
       });
 
       Highcharts.chart("market-growth-drivers-chart", {
-        chart: { type: "bar" },
+        chart: { type: "column" },
         title: { text: "Market Growth Drivers" },
         xAxis: { categories: ["Industry", "Commercial", "ETC"] },
         yAxis: { title: { text: "Instances" } },
@@ -762,6 +804,24 @@
       });
 
       function updateCompetitorDetails(name) {
+        const pricing = {
+          "Competitor A": {
+            flat: "P35,000",
+            variable: "P30,000",
+            bundle: "P25,000",
+          },
+          "Competitor B": {
+            flat: "P40,000",
+            variable: "P35,000",
+            bundle: "P30,000",
+          },
+          "Competitor C": {
+            flat: "P45,000",
+            variable: "P40,000",
+            bundle: "P35,000",
+          },
+        };
+
         const strengths = {
           "Competitor A": {
             product: "8/10",
@@ -806,13 +866,13 @@
           },
           "Competitor B": {
             ai: "Moderate",
-            ml: "High",
+            ml: "N/A",
             fr: "Advanced",
           },
           "Competitor C": {
             ai: "Basic",
             ml: "Moderate",
-            fr: "High",
+            fr: "N/A",
           },
         };
 
@@ -851,8 +911,16 @@
       document.getElementById("renewable-energy-solar").textContent = renewableEnergy[name].solar;
       document.getElementById("renewable-energy-wind").textContent = renewableEnergy[name].wind;
       document.getElementById("renewable-energy-hydro").textContent = renewableEnergy[name].hydro;
-    }
 
+      //Update competitor pricing
+      document.getElementById("competitor-price-flat").textContent = pricing[name].flat;
+      document.getElementById("competitor-price-variable").textContent = pricing[name].variable;
+      document.getElementById("competitor-price-bundle").textContent = pricing[name].bundle;
+      //Update Progress bar
+      document.getElementById("competitor-price-flat-progressbar").style.width = parseFloat(pricing[name].flat.replace(/[^0-9]/g, "")) / 1000 + "%";
+      document.getElementById("competitor-price-variable-progressbar").style.width = parseFloat(pricing[name].variable.replace(/[^0-9]/g, "")) / 1000 + "%";
+      document.getElementById("competitor-price-bundle-progressbar").style.width = parseFloat(pricing[name].bundle.replace(/[^0-9]/g, "")) / 1000 + "%";
+      }
     // Example call to updateCompetitorDetails
     updateCompetitorDetails("Competitor A"); // Call with the selected competitor
     });
