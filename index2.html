@@ -120,7 +120,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="#" class="brand-link">
+      <a href="index2.html" class="brand-link">
         <img src="dist/img/CEPALCO LOGO TRANSPARENT.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
           style="opacity: 0.8" />
         <span class="brand-text font-weight-light">App System</span>
@@ -143,11 +143,11 @@
               <!-- Side bar items -->
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="#" class="nav-link active">
+                  <a href="index2.html" class="nav-link active">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Overview</p>
                   </a>
-                  <a href="#" class="nav-link">
+                  <a href="regulatory.html" class="nav-link">
                     <i class="fas fa-book"></i>
                     <p>Regulatory Landscape</p>
                   </a>
@@ -252,6 +252,17 @@
           <div class="row mb-2">
             <div class="col-sm-6">
               <h1 class="m-0">Dashboard</h1>
+              <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="regionDropdown" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  REGION
+                </button>
+                <div class="dropdown-menu" aria-labelledby="regionDropdown">
+                  <a class="dropdown-item" href="#">Region 1</a>
+                  <a class="dropdown-item" href="#">Region 2</a>
+                  <a class="dropdown-item" href="#">Region 3</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -382,17 +393,51 @@
           <div class="row">
             <!-- Box for CUSTOMER_PREFERENCES -->
             <section class="col-lg-12 connectedSortable">
-              <div class="card">
-                <div class="card-header">
-                  <h3 class="card-title">Customer Preferences</h3>
-                  <a href class="btn btn-sm btn-info float-right">View
-                    Details</a>
-                </div>
-                <div class="card-body">
-                  <div id="customer-preferences-chart" style="height: 400px"></div>
-                </div>
+              <div class="row">
+                  <div class="col-lg-6">
+                      <div class="card">
+                          <div class="card-header">
+                              <h3 class="card-title">Customer Preferences</h3>
+                              <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
+                          </div>
+                          <div class="card-body">
+                              <div id="customer-preferences-chart" style="height: 400px;"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-6">
+                      <div class="card">
+                          <div class="card-header">
+                              <h3 class="card-title">Preference Factors</h3>
+                          </div>
+                          <div class="card-body">
+                              <div id="preference-factors-chart" style="height: 400px;"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-6">
+                      <div class="card">
+                          <div class="card-header">
+                              <h3 class="card-title">Emerging Trends</h3>
+                          </div>
+                          <div class="card-body">
+                              <div id="emerging-trends-chart" style="height: 400px;"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-6">
+                      <div class="card">
+                          <div class="card-header">
+                              <h3 class="card-title">Demographic Impact</h3>
+                          </div>
+                          <div class="card-body">
+                              <div id="demographic-impact-chart" style="height: 400px;"></div>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </section>
+          </section>
+
 
 
             <!-- Box for COMPETITOR_ANALYSIS -->
@@ -412,7 +457,8 @@
                     Flat Rate Pricing
                     <span class="float-right" id="competitor-price-flat"><b>P35000</b></span>
                     <div class="progress progress-sm">
-                      <div class="progress-bar bg-primary" style="width: 35%" id="competitor-price-flat-progressbar"></div>
+                      <div class="progress-bar bg-primary" style="width: 35%" id="competitor-price-flat-progressbar">
+                      </div>
                     </div>
                   </div>
                   <!-- /.progress-group -->
@@ -421,16 +467,18 @@
                     Variable Pricing
                     <span class="float-right" id="competitor-price-variable"><b>P30000</b></span>
                     <div class="progress progress-sm">
-                      <div class="progress-bar bg-danger" style="width: 30%" id="competitor-price-variable-progressbar"></div>
+                      <div class="progress-bar bg-danger" style="width: 30%" id="competitor-price-variable-progressbar">
+                      </div>
                     </div>
                   </div>
 
                   <!-- /.progress-group -->
                   <div class="progress-group">
                     <span class="progress-text">Bundled Packages</span>
-                    <span class="float-right"id="competitor-price-bundle"><b>P25000</b></span>
+                    <span class="float-right" id="competitor-price-bundle"><b>P25000</b></span>
                     <div class="progress progress-sm">
-                      <div class="progress-bar bg-success" style="width: 25%" id="competitor-price-bundle-progressbar"></div>
+                      <div class="progress-bar bg-success" style="width: 25%" id="competitor-price-bundle-progressbar">
+                      </div>
                     </div>
                   </div>
 
@@ -439,7 +487,8 @@
                     Industry Standard
                     <span class="float-right"><b>P100000</b></span>
                     <div class="progress progress-sm">
-                      <div class="progress-bar bg-info" style="width: 100%" id="competitor-price-standard-progressbar"></div>
+                      <div class="progress-bar bg-info" style="width: 100%" id="competitor-price-standard-progressbar">
+                      </div>
                     </div>
                   </div>
                   <!-- /.progress-group -->
@@ -739,7 +788,6 @@
           },
         ],
       });
-
       Highcharts.chart("customer-preferences-chart", {
         chart: { type: "pie" },
         title: { text: "Customer Preferences" },
@@ -754,8 +802,6 @@
                 color: "white", // Adjust color to ensure readability
                 textOutline: false, // Remove text outline
               },
-              align: "center", // Center the text
-              verticalAlign: "middle", // Center the text vertically
             },
           },
         },
@@ -766,6 +812,68 @@
               ["Preference A", 45],
               ["Preference B", 25],
               ["Preference C", 30],
+            ],
+          },
+        ],
+      });
+
+      Highcharts.chart("preference-factors-chart", {
+        chart: { type: "bar" },
+        title: { text: "Preference Factors" },
+        xAxis: {
+          categories: ["Factor A", "Factor B", "Factor C"],
+          title: { text: "Factors" },
+        },
+        yAxis: {
+          title: { text: "Importance" },
+        },
+        series: [
+          {
+            name: "Factors",
+            data: [5, 7, 3], // Example data
+          },
+        ],
+      });
+
+      Highcharts.chart("emerging-trends-chart", {
+        chart: { type: "line" },
+        title: { text: "Emerging Trends" },
+        xAxis: {
+          categories: ["Trend A", "Trend B", "Trend C"],
+          title: { text: "Trends" },
+        },
+        yAxis: {
+          title: { text: "Impact" },
+        },
+        series: [
+          {
+            name: "Trends",
+            data: [2, 5, 4], // Example data
+          },
+        ],
+      });
+
+      Highcharts.chart("demographic-impact-chart", {
+        chart: { type: "pie" },
+        title: { text: "Demographic Impact" },
+        plotOptions: {
+          pie: {
+            innerSize: '50%', // Make it a donut chart
+            dataLabels: {
+              enabled: true,
+              formatter: function () {
+                return this.point.name + ": " + this.point.y + "%"; // Append '%' to the data labels
+              },
+            },
+          },
+        },
+        series: [
+          {
+            name: "Impact",
+            data: [
+              ["Impact A", 30],
+              ["Impact B", 50],
+              ["Impact C", 20],
             ],
           },
         ],
@@ -896,33 +1004,33 @@
 
 
         document.getElementById("competitor-strengths-product").textContent = strengths[name].product;
-      document.getElementById("competitor-strengths-pricing").textContent = strengths[name].pricing;
-      document.getElementById("competitor-strengths-reach").textContent = strengths[name].reach;
-      document.getElementById("competitor-weaknesses-man-power").textContent = weaknesses[name]['man-power'];
-      document.getElementById("competitor-weaknesses-speed").textContent = weaknesses[name].speed;
-      document.getElementById("competitor-weaknesses-service").textContent = weaknesses[name].service;
-      
-      // Update Tech Innovations
-      document.getElementById("tech-innovations-ai").textContent = techInnovations[name].ai;
-      document.getElementById("tech-innovations-ml").textContent = techInnovations[name].ml;
-      document.getElementById("tech-innovations-fr").textContent = techInnovations[name].fr;
-      
-      // Update Renewable Energy
-      document.getElementById("renewable-energy-solar").textContent = renewableEnergy[name].solar;
-      document.getElementById("renewable-energy-wind").textContent = renewableEnergy[name].wind;
-      document.getElementById("renewable-energy-hydro").textContent = renewableEnergy[name].hydro;
+        document.getElementById("competitor-strengths-pricing").textContent = strengths[name].pricing;
+        document.getElementById("competitor-strengths-reach").textContent = strengths[name].reach;
+        document.getElementById("competitor-weaknesses-man-power").textContent = weaknesses[name]['man-power'];
+        document.getElementById("competitor-weaknesses-speed").textContent = weaknesses[name].speed;
+        document.getElementById("competitor-weaknesses-service").textContent = weaknesses[name].service;
 
-      //Update competitor pricing
-      document.getElementById("competitor-price-flat").textContent = pricing[name].flat;
-      document.getElementById("competitor-price-variable").textContent = pricing[name].variable;
-      document.getElementById("competitor-price-bundle").textContent = pricing[name].bundle;
-      //Update Progress bar
-      document.getElementById("competitor-price-flat-progressbar").style.width = parseFloat(pricing[name].flat.replace(/[^0-9]/g, "")) / 1000 + "%";
-      document.getElementById("competitor-price-variable-progressbar").style.width = parseFloat(pricing[name].variable.replace(/[^0-9]/g, "")) / 1000 + "%";
-      document.getElementById("competitor-price-bundle-progressbar").style.width = parseFloat(pricing[name].bundle.replace(/[^0-9]/g, "")) / 1000 + "%";
+        // Update Tech Innovations
+        document.getElementById("tech-innovations-ai").textContent = techInnovations[name].ai;
+        document.getElementById("tech-innovations-ml").textContent = techInnovations[name].ml;
+        document.getElementById("tech-innovations-fr").textContent = techInnovations[name].fr;
+
+        // Update Renewable Energy
+        document.getElementById("renewable-energy-solar").textContent = renewableEnergy[name].solar;
+        document.getElementById("renewable-energy-wind").textContent = renewableEnergy[name].wind;
+        document.getElementById("renewable-energy-hydro").textContent = renewableEnergy[name].hydro;
+
+        //Update competitor pricing
+        document.getElementById("competitor-price-flat").textContent = pricing[name].flat;
+        document.getElementById("competitor-price-variable").textContent = pricing[name].variable;
+        document.getElementById("competitor-price-bundle").textContent = pricing[name].bundle;
+        //Update Progress bar
+        document.getElementById("competitor-price-flat-progressbar").style.width = parseFloat(pricing[name].flat.replace(/[^0-9]/g, "")) / 1000 + "%";
+        document.getElementById("competitor-price-variable-progressbar").style.width = parseFloat(pricing[name].variable.replace(/[^0-9]/g, "")) / 1000 + "%";
+        document.getElementById("competitor-price-bundle-progressbar").style.width = parseFloat(pricing[name].bundle.replace(/[^0-9]/g, "")) / 1000 + "%";
       }
-    // Example call to updateCompetitorDetails
-    updateCompetitorDetails("Competitor A"); // Call with the selected competitor
+      // Example call to updateCompetitorDetails
+      updateCompetitorDetails("Competitor A"); // Call with the selected competitor
     });
   </script>
 
