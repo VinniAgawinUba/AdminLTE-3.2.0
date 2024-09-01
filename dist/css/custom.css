@@ -1,0 +1,62 @@
+/* Change the color of all breadcrumb links */
+.breadcrumb .breadcrumb-item a {
+  color: #e2e2e2; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.breadcrumb .breadcrumb-item a:hover {
+  color: #ffffff; /* Hover color */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Change the color of the active breadcrumb item */
+.breadcrumb .breadcrumb-item.active {
+  color: #ffffff; /* Active item color */
+}
+
+/* Optionally, change the background color of the breadcrumb */
+.breadcrumb {
+  background-color: #00000000; /* Transparent background */
+  padding: 0.5rem 1rem; /* Spacing */
+  border-radius: 0.25rem; /* Rounded corners */
+  display: flex; /* Flexbox layout for responsive design */
+  flex-wrap: nowrap; /* Prevent wrapping of breadcrumb items */
+  overflow-x: auto; /* Allow horizontal scrolling */
+}
+
+/* Change the breadcrumb separator color */
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  color: #ffffff; /* Separator color */
+  padding: 0 0.5rem; /* Spacing around the separator */
+}
+
+/* Ellipsis item styling */
+.breadcrumb .breadcrumb-item.ellipsis {
+  cursor: default; /* Prevent interaction */
+  pointer-events: none; /* Disable clicks */
+  max-width: 30px; /* Limit width */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Show ellipsis */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 767.98px) {
+  .breadcrumb {
+    font-size: 0.875rem; /* Smaller font size */
+    padding: 0.25rem 0.5rem; /* Adjust padding */
+  }
+
+  .breadcrumb .breadcrumb-item {
+    max-width: 80px; /* Limit width of items */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Ellipsis for long text */
+    white-space: nowrap; /* Prevent wrapping */
+  }
+
+  .breadcrumb .breadcrumb-item a {
+    text-overflow: ellipsis; /* Ellipsis for links */
+    white-space: nowrap; /* Prevent wrapping */
+  }
+}
