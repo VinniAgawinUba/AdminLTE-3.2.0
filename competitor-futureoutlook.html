@@ -38,7 +38,7 @@
                             Dashboard
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            Regulatory Landscape
+                            Competitor Future Outlook
                         </li>
                     </ol>
                 </nav>
@@ -255,16 +255,16 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Regulatory Landscape</h1>
+                            <h1 class="m-0">Future Outlook</h1>
                             <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle" type="button" id="regionDropdown"
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="competitorDropdown"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    REGION
+                                    Competitor
                                 </button>
-                                <div class="dropdown-menu" aria-labelledby="regionDropdown">
-                                    <a class="dropdown-item" href="#">Region 1</a>
-                                    <a class="dropdown-item" href="#">Region 2</a>
-                                    <a class="dropdown-item" href="#">Region 3</a>
+                                <div class="dropdown-menu" aria-labelledby="competitorDropdown">
+                                    <a class="dropdown-item" href="#">Competitor 1</a>
+                                    <a class="dropdown-item" href="#">Competitor 2</a>
+                                    <a class="dropdown-item" href="#">Competitor 3</a>
                                 </div>
                             </div>
                         </div>
@@ -301,8 +301,8 @@
                             <div class="info-box">
                                 <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-globe"></i></span>
                                 <div class="info-box-content">
-                                    <span class="info-box-text">Region</span>
-                                    <span class="info-box-number">NCR</span>
+                                    <span class="info-box-text">Competitor</span>
+                                    <span class="info-box-number">Competitor 2</span>
                                 </div>
                             </div>
                         </div>
@@ -322,37 +322,99 @@
                     <!-- Main row -->
                     <div class="row">
                         <!-- Left col -->
-                        <section class="col-lg-12 connectedSortable">
-                            <section class="col-lg-12 connectedSortable">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h3 class="card-title">Regulatory Landscape</h3>
-                                        <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
+                        <!-- Box for FUTURE_OUTLOOK -->
+                        <section class="col-lg-6 connectedSortable">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Future Outlook</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>This chart shows the duration of future outlooks for different competitors. It helps visualize how long each competitor expects their outlook to last.</p>
+                                    <div class="info-card">
+                                        <h4>Key Insights:</h4>
+                                        <ul>
+                                            <li>Competitor A is planning a short-term outlook.</li>
+                                            <li>Competitor B has a longer-term vision.</li>
+                                            <li>Competitor C has a mid-term outlook strategy.</li>
+                                        </ul>
                                     </div>
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="chart-container">
-                                                    <h4 class="chart-title">Regulatory Landscape Chart</h4>
-                                                    <div id="regulatory-landscape-chart" style="height: 400px;"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="chart-container">
-                                                    <h4 class="chart-title">Regulatory Frameworks Chart</h4>
-                                                    <div id="regulatory-frameworks-chart" style="height: 400px;"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="chart-container">
-                                                    <h4 class="chart-title">Regulatory Changes Chart</h4>
-                                                    <div id="regulatory-changes-chart" style="height: 400px;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="chart-container">
+                                        <h4 class="chart-title">Future Outlook Chart</h4>
+                                        <div id="future-outlook-chart" style="height: 400px"></div>
                                     </div>
                                 </div>
-                            </section>
+                            </div>
+                        </section>
+                        
+                        <section class="col-lg-6 connectedSortable">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Growth Projection</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>This chart illustrates the projected growth rates for different competitors. It provides an overview of expected growth performance.</p>
+                                    <div class="info-card">
+                                        <h4>Projection Highlights:</h4>
+                                        <ul>
+                                            <li>Competitor A is projected to grow at a steady rate.</li>
+                                            <li>Competitor B has the highest growth rate forecast.</li>
+                                            <li>Competitor C shows moderate growth potential.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="chart-container">
+                                        <h4 class="chart-title">Growth Projection Chart</h4>
+                                        <div id="growth-projection-chart" style="height: 400px"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="col-lg-6 connectedSortable">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Influencing Factors</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>This chart represents various factors that influence the market. Each factor's impact is visualized to understand their significance better.</p>
+                                    <div class="info-card">
+                                        <h4>Key Influencers:</h4>
+                                        <ul>
+                                            <li>Factor A has a significant impact on market trends.</li>
+                                            <li>Factor B is a major consideration for strategic planning.</li>
+                                            <li>Factor C contributes to moderate market shifts.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="chart-container">
+                                        <h4 class="chart-title">Influencing Factors Chart</h4>
+                                        <div id="influencing-factors-chart" style="height: 400px"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="col-lg-6 connectedSortable">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Strategic Opportunities</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>This chart outlines the strategic opportunities available to competitors. It provides insight into potential areas for growth and development.</p>
+                                    <div class="info-card">
+                                        <h4>Opportunities Overview:</h4>
+                                        <ul>
+                                            <li>Opportunity A targets short-term gains.</li>
+                                            <li>Opportunity B focuses on mid-term market expansion.</li>
+                                            <li>Opportunity C is aligned with long-term strategic goals.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="chart-container">
+                                        <h4 class="chart-title">Strategic Opportunities Chart</h4>
+                                        <div id="strategic-opportunities-chart" style="height: 400px"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
 
                     </div>
             </section>
@@ -409,126 +471,147 @@
     <!-- Custom JS -->
     <script>
         Highcharts.setOptions({
-        chart: {
-          backgroundColor: "#333", // Dark background
-          style: {
-            color: "#fff", // Light text color
-          },
-        },
-        title: {
-          style: {
-            color: "#fff", // Light title color
-          },
-        },
-        xAxis: {
-          labels: {
-            style: {
-              color: "#fff", // Light x-axis labels color
+            chart: {
+                backgroundColor: "#333", // Dark background
+                style: {
+                    color: "#fff", // Light text color
+                },
             },
-          },
-          title: {
-            style: {
-              color: "#fff", // Light x-axis title color
+            title: {
+                style: {
+                    color: "#fff", // Light title color
+                },
             },
-          },
-        },
-        yAxis: {
-          labels: {
-            style: {
-              color: "#fff", // Light y-axis labels color
+            xAxis: {
+                labels: {
+                    style: {
+                        color: "#fff", // Light x-axis labels color
+                    },
+                },
+                title: {
+                    style: {
+                        color: "#fff", // Light x-axis title color
+                    },
+                },
             },
-          },
-          title: {
-            style: {
-              color: "#fff", // Light y-axis title color
+            yAxis: {
+                labels: {
+                    style: {
+                        color: "#fff", // Light y-axis labels color
+                    },
+                },
+                title: {
+                    style: {
+                        color: "#fff", // Light y-axis title color
+                    },
+                },
             },
-          },
-        },
-        tooltip: {
-          backgroundColor: "#000", // Dark tooltip background
-          style: {
-            color: "#fff", // Light tooltip text color
-          },
-        },
-        plotOptions: {
-          series: {
-            color: "red", // Default series color
-          },
-        },
-      });
-     document.addEventListener("DOMContentLoaded", function () {
-        Highcharts.chart('regulatory-landscape-chart', {
-  chart: { type: 'column' },
-  title: { text: 'Regulatory Landscape by Region' },
-  xAxis: {
-    categories: ['Region A', 'Region B', 'Region C'], // Replace with actual data
-    title: { text: 'Regions' }
-  },
-  yAxis: {
-    title: { text: 'Impact Level' },
-    labels: {
-      formatter: function () {
-        return this.value + '%'; // Append '%' to y-axis labels
-      },
-    },
-  },
-  series: [{
-    name: 'Impact on Competition',
-    data: [20, 40, 60], // Replace with actual data
-    color: '#007bff' // Optional: change color
-  }],
-});
+            tooltip: {
+                backgroundColor: "#000", // Dark tooltip background
+                style: {
+                    color: "#fff", // Light tooltip text color
+                },
+            },
+            plotOptions: {
+                series: {
+                    color: "red", // Default series color
+                },
+            },
+        });
+        Highcharts.chart('future-outlook-chart', {
+            chart: { type: 'line' },
+            title: { text: 'Future Outlook by Competitor' },
+            xAxis: {
+                categories: ['Competitor A', 'Competitor B', 'Competitor C'], // Replace with actual data
+                title: { text: 'Competitors' }
+            },
+            yAxis: {
+                title: { text: 'Outlook Duration (Months)' },
+                labels: {
+                    formatter: function () {
+                        return this.value + ' months'; // Display months
+                    },
+                },
+            },
+            series: [{
+                name: 'Outlook Duration',
+                data: [12, 24, 18], // Replace with actual data
+                color: '#007bff' // Optional: change color
+            }],
+        });
 
-Highcharts.chart('regulatory-frameworks-chart', {
-  chart: { type: 'pie' },
-  title: { text: 'Regulatory Frameworks Distribution' },
-  plotOptions: {
-    pie: {
-      dataLabels: {
-        enabled: true,
-        formatter: function () {
-          return this.point.name + ': ' + this.point.y + ' units'; // Append 'units' to data labels
-        },
-        style: {
-          color: '#fff',
-          textOutline: false,
-        },
-      },
-    },
-  },
-  series: [{
-    name: 'Frameworks',
-    data: [
-      ['Framework A', 30], // Replace with actual data
-      ['Framework B', 20],
-      ['Framework C', 50]
-    ],
-  }],
-});
+        Highcharts.chart('growth-projection-chart', {
+            chart: { type: 'column' },
+            title: { text: 'Growth Projection Rate' },
+            xAxis: {
+                categories: ['Competitor A', 'Competitor B', 'Competitor C'], // Replace with actual data
+                title: { text: 'Competitors' }
+            },
+            yAxis: {
+                title: { text: 'Projected Growth Rate (%)' },
+                labels: {
+                    formatter: function () {
+                        return this.value + '%'; // Display percentage
+                    },
+                },
+            },
+            series: [{
+                name: 'Growth Rate',
+                data: [5, 10, 7], // Replace with actual data
+                color: '#ffc107' // Optional: change color
+            }],
+        });
 
-Highcharts.chart('regulatory-changes-chart', {
-  chart: { type: 'bar' },
-  title: { text: 'Regulatory Changes by Type' },
-  xAxis: {
-    categories: ['Change A', 'Change B', 'Change C'], // Replace with actual data
-    title: { text: 'Changes' }
-  },
-  yAxis: {
-    title: { text: 'Number of Changes' },
-    labels: {
-      formatter: function () {
-        return this.value; // No units needed
-      },
-    },
-  },
-  series: [{
-    name: 'Changes',
-    data: [5, 8, 3], // Replace with actual data
-    color: '#28a745' // Optional: change color
-  }],
-});
+        Highcharts.chart('influencing-factors-chart', {
+            chart: { type: 'pie' },
+            title: { text: 'Influencing Factors' },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: true,
+                        formatter: function () {
+                            return this.point.name + ': ' + this.point.y; // Display factor impact
+                        },
+                        style: {
+                            color: '#fff',
+                            textOutline: false,
+                        },
+                    },
+                },
+            },
+            series: [{
+                name: 'Impact Factors',
+                data: [
+                    ['Factor A', 40], // Replace with actual data
+                    ['Factor B', 30],
+                    ['Factor C', 20],
+                    ['Factor D', 10]
+                ],
+            }],
+        });
 
-     });
+        Highcharts.chart('strategic-opportunities-chart', {
+            chart: { type: 'bar' },
+            title: { text: 'Strategic Opportunities' },
+            xAxis: {
+                categories: ['Opportunity A', 'Opportunity B', 'Opportunity C'], // Replace with actual data
+                title: { text: 'Opportunities' }
+            },
+            yAxis: {
+                title: { text: 'Opportunity Value' },
+                labels: {
+                    formatter: function () {
+                        return this.value; // No units needed
+                    },
+                },
+            },
+            series: [{
+                name: 'Opportunity Value',
+                data: [8, 12, 15], // Replace with actual data
+                color: '#28a745' // Optional: change color
+            }],
+        });
+
     </script>
 
 </body>

@@ -38,7 +38,7 @@
                             Dashboard
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            Regulatory Landscape
+                            Competitor Market Strategies
                         </li>
                     </ol>
                 </nav>
@@ -255,16 +255,16 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Regulatory Landscape</h1>
+                            <h1 class="m-0">Market Strategies</h1>
                             <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle" type="button" id="regionDropdown"
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="competitorDropdown"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    REGION
+                                    COMPETITOR
                                 </button>
-                                <div class="dropdown-menu" aria-labelledby="regionDropdown">
-                                    <a class="dropdown-item" href="#">Region 1</a>
-                                    <a class="dropdown-item" href="#">Region 2</a>
-                                    <a class="dropdown-item" href="#">Region 3</a>
+                                <div class="dropdown-menu" aria-labelledby="competitorDropdown">
+                                    <a class="dropdown-item" href="#">Competitor 1</a>
+                                    <a class="dropdown-item" href="#">Competitor 2</a>
+                                    <a class="dropdown-item" href="#">Competitor 3</a>
                                 </div>
                             </div>
                         </div>
@@ -301,8 +301,8 @@
                             <div class="info-box">
                                 <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-globe"></i></span>
                                 <div class="info-box-content">
-                                    <span class="info-box-text">Region</span>
-                                    <span class="info-box-number">NCR</span>
+                                    <span class="info-box-text">Competitor</span>
+                                    <span class="info-box-number">Competitor 3</span>
                                 </div>
                             </div>
                         </div>
@@ -322,37 +322,80 @@
                     <!-- Main row -->
                     <div class="row">
                         <!-- Left col -->
-                        <section class="col-lg-12 connectedSortable">
-                            <section class="col-lg-12 connectedSortable">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h3 class="card-title">Regulatory Landscape</h3>
-                                        <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="chart-container">
-                                                    <h4 class="chart-title">Regulatory Landscape Chart</h4>
-                                                    <div id="regulatory-landscape-chart" style="height: 400px;"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="chart-container">
-                                                    <h4 class="chart-title">Regulatory Frameworks Chart</h4>
-                                                    <div id="regulatory-frameworks-chart" style="height: 400px;"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="chart-container">
-                                                    <h4 class="chart-title">Regulatory Changes Chart</h4>
-                                                    <div id="regulatory-changes-chart" style="height: 400px;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                        <!-- Informational Cards for Market Strategies -->
+                        <section class="col-lg-6 connectedSortable">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Market Strategies</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>Here you can see the distribution of market strategies among different
+                                        competitors. This chart shows how each competitor is positioning themselves in
+                                        the market.</p>
+                                    <div class="info-card">
+                                        <h4>Top Strategies:</h4>
+                                        <ul>
+                                            <li>Competitor A: Focuses on aggressive market penetration.</li>
+                                            <li>Competitor B: Prioritizes product innovation.</li>
+                                            <li>Competitor C: Leverages cost leadership.</li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </section>
+                            </div>
+                        </section>
+
+                        <!-- Box for MARKET_STRATEGIES -->
+                        <section class="col-lg-6 connectedSortable">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Market Strategies</h3>
+                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
+                                </div>
+                                <div class="card-body">
+                                    <div id="market-strategies-chart" style="height: 400px"></div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Box for ENTRY_BARRIERS -->
+                        <section class="col-lg-6 connectedSortable">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Entry Barriers</h3>
+                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
+                                </div>
+                                <div class="card-body">
+                                    <div id="entry-barriers-chart" style="height: 400px"></div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Box for EXPANSION_STRATEGIES -->
+                        <section class="col-lg-6 connectedSortable">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Expansion Strategies</h3>
+                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
+                                </div>
+                                <div class="card-body">
+                                    <div id="expansion-strategies-chart" style="height: 400px"></div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Box for MERGERS_ACQUISITIONS -->
+                        <section class="col-lg-12 connectedSortable">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Mergers & Acquisitions</h3>
+                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
+                                </div>
+                                <div class="card-body">
+                                    <div id="mergers-acquisitions-chart" style="height: 400px"></div>
+                                </div>
+                            </div>
+                        </section>
+
 
                     </div>
             </section>
@@ -409,126 +452,147 @@
     <!-- Custom JS -->
     <script>
         Highcharts.setOptions({
-        chart: {
-          backgroundColor: "#333", // Dark background
-          style: {
-            color: "#fff", // Light text color
-          },
-        },
-        title: {
-          style: {
-            color: "#fff", // Light title color
-          },
-        },
-        xAxis: {
-          labels: {
-            style: {
-              color: "#fff", // Light x-axis labels color
+            chart: {
+                backgroundColor: "#333", // Dark background
+                style: {
+                    color: "#fff", // Light text color
+                },
             },
-          },
-          title: {
-            style: {
-              color: "#fff", // Light x-axis title color
+            title: {
+                style: {
+                    color: "#fff", // Light title color
+                },
             },
-          },
-        },
-        yAxis: {
-          labels: {
-            style: {
-              color: "#fff", // Light y-axis labels color
+            xAxis: {
+                labels: {
+                    style: {
+                        color: "#fff", // Light x-axis labels color
+                    },
+                },
+                title: {
+                    style: {
+                        color: "#fff", // Light x-axis title color
+                    },
+                },
             },
-          },
-          title: {
-            style: {
-              color: "#fff", // Light y-axis title color
+            yAxis: {
+                labels: {
+                    style: {
+                        color: "#fff", // Light y-axis labels color
+                    },
+                },
+                title: {
+                    style: {
+                        color: "#fff", // Light y-axis title color
+                    },
+                },
             },
-          },
-        },
-        tooltip: {
-          backgroundColor: "#000", // Dark tooltip background
-          style: {
-            color: "#fff", // Light tooltip text color
-          },
-        },
-        plotOptions: {
-          series: {
-            color: "red", // Default series color
-          },
-        },
-      });
-     document.addEventListener("DOMContentLoaded", function () {
-        Highcharts.chart('regulatory-landscape-chart', {
-  chart: { type: 'column' },
-  title: { text: 'Regulatory Landscape by Region' },
-  xAxis: {
-    categories: ['Region A', 'Region B', 'Region C'], // Replace with actual data
-    title: { text: 'Regions' }
-  },
-  yAxis: {
-    title: { text: 'Impact Level' },
-    labels: {
-      formatter: function () {
-        return this.value + '%'; // Append '%' to y-axis labels
-      },
-    },
-  },
-  series: [{
-    name: 'Impact on Competition',
-    data: [20, 40, 60], // Replace with actual data
-    color: '#007bff' // Optional: change color
-  }],
-});
+            tooltip: {
+                backgroundColor: "#000", // Dark tooltip background
+                style: {
+                    color: "#fff", // Light tooltip text color
+                },
+            },
+            plotOptions: {
+                series: {
+                    color: "red", // Default series color
+                },
+            },
+        });
+        Highcharts.chart('market-strategies-chart', {
+            chart: { type: 'column' },
+            title: { text: 'Market Strategies by Competitor' },
+            xAxis: {
+                categories: ['Competitor A', 'Competitor B', 'Competitor C'], // Replace with actual data
+                title: { text: 'Competitors' }
+            },
+            yAxis: {
+                title: { text: 'Number of Strategies' },
+                labels: {
+                    formatter: function () {
+                        return this.value; // No units needed
+                    },
+                },
+            },
+            series: [{
+                name: 'Strategies',
+                data: [10, 20, 30], // Replace with actual data
+                color: '#17a2b8' // Optional: change color
+            }],
+        });
 
-Highcharts.chart('regulatory-frameworks-chart', {
-  chart: { type: 'pie' },
-  title: { text: 'Regulatory Frameworks Distribution' },
-  plotOptions: {
-    pie: {
-      dataLabels: {
-        enabled: true,
-        formatter: function () {
-          return this.point.name + ': ' + this.point.y + ' units'; // Append 'units' to data labels
-        },
-        style: {
-          color: '#fff',
-          textOutline: false,
-        },
-      },
-    },
-  },
-  series: [{
-    name: 'Frameworks',
-    data: [
-      ['Framework A', 30], // Replace with actual data
-      ['Framework B', 20],
-      ['Framework C', 50]
-    ],
-  }],
-});
+        Highcharts.chart('entry-barriers-chart', {
+            chart: { type: 'pie' },
+            title: { text: 'Entry Barriers Distribution' },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: true,
+                        formatter: function () {
+                            return this.point.name + ': ' + this.point.y; // Display barrier count
+                        },
+                        style: {
+                            color: '#fff',
+                            textOutline: false,
+                        },
+                    },
+                },
+            },
+            series: [{
+                name: 'Entry Barriers',
+                data: [
+                    ['Barrier A', 5], // Replace with actual data
+                    ['Barrier B', 8],
+                    ['Barrier C', 12]
+                ],
+            }],
+        });
 
-Highcharts.chart('regulatory-changes-chart', {
-  chart: { type: 'bar' },
-  title: { text: 'Regulatory Changes by Type' },
-  xAxis: {
-    categories: ['Change A', 'Change B', 'Change C'], // Replace with actual data
-    title: { text: 'Changes' }
-  },
-  yAxis: {
-    title: { text: 'Number of Changes' },
-    labels: {
-      formatter: function () {
-        return this.value; // No units needed
-      },
-    },
-  },
-  series: [{
-    name: 'Changes',
-    data: [5, 8, 3], // Replace with actual data
-    color: '#28a745' // Optional: change color
-  }],
-});
+        Highcharts.chart('expansion-strategies-chart', {
+            chart: { type: 'bar' },
+            title: { text: 'Expansion Strategies by Competitor' },
+            xAxis: {
+                categories: ['Competitor A', 'Competitor B', 'Competitor C'], // Replace with actual data
+                title: { text: 'Competitors' }
+            },
+            yAxis: {
+                title: { text: 'Number of Strategies' },
+                labels: {
+                    formatter: function () {
+                        return this.value; // No units needed
+                    },
+                },
+            },
+            series: [{
+                name: 'Strategies',
+                data: [8, 15, 20], // Replace with actual data
+                color: '#28a745' // Optional: change color
+            }],
+        });
 
-     });
+        Highcharts.chart('mergers-acquisitions-chart', {
+            chart: { type: 'column' },
+            title: { text: 'Mergers & Acquisitions by Competitor' },
+            xAxis: {
+                categories: ['Competitor A', 'Competitor B', 'Competitor C'], // Replace with actual data
+                title: { text: 'Competitors' }
+            },
+            yAxis: {
+                title: { text: 'Number of Mergers/Acquisitions' },
+                labels: {
+                    formatter: function () {
+                        return this.value; // No units needed
+                    },
+                },
+            },
+            series: [{
+                name: 'Mergers & Acquisitions',
+                data: [2, 5, 3], // Replace with actual data
+                color: '#dc3545' // Optional: change color
+            }],
+        });
+
+
     </script>
 
 </body>

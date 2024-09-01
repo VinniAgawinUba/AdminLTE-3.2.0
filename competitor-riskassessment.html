@@ -38,7 +38,7 @@
                             Dashboard
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            Regulatory Landscape
+                            Competitor Risk Assessment
                         </li>
                     </ol>
                 </nav>
@@ -255,16 +255,16 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Regulatory Landscape</h1>
+                            <h1 class="m-0">Risk Assessment</h1>
                             <div class="dropdown">
                                 <button class="btn btn-primary dropdown-toggle" type="button" id="regionDropdown"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    REGION
+                                    COMPETITOR
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="regionDropdown">
-                                    <a class="dropdown-item" href="#">Region 1</a>
-                                    <a class="dropdown-item" href="#">Region 2</a>
-                                    <a class="dropdown-item" href="#">Region 3</a>
+                                    <a class="dropdown-item" href="#">Competitor 1</a>
+                                    <a class="dropdown-item" href="#">Competitor 2</a>
+                                    <a class="dropdown-item" href="#">Competitor 3</a>
                                 </div>
                             </div>
                         </div>
@@ -301,8 +301,8 @@
                             <div class="info-box">
                                 <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-globe"></i></span>
                                 <div class="info-box-content">
-                                    <span class="info-box-text">Region</span>
-                                    <span class="info-box-number">NCR</span>
+                                    <span class="info-box-text">Competitor</span>
+                                    <span class="info-box-number">Competitor 1</span>
                                 </div>
                             </div>
                         </div>
@@ -322,39 +322,152 @@
                     <!-- Main row -->
                     <div class="row">
                         <!-- Left col -->
-                        <section class="col-lg-12 connectedSortable">
-                            <section class="col-lg-12 connectedSortable">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h3 class="card-title">Regulatory Landscape</h3>
-                                        <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="chart-container">
-                                                    <h4 class="chart-title">Regulatory Landscape Chart</h4>
-                                                    <div id="regulatory-landscape-chart" style="height: 400px;"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="chart-container">
-                                                    <h4 class="chart-title">Regulatory Frameworks Chart</h4>
-                                                    <div id="regulatory-frameworks-chart" style="height: 400px;"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="chart-container">
-                                                    <h4 class="chart-title">Regulatory Changes Chart</h4>
-                                                    <div id="regulatory-changes-chart" style="height: 400px;"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+
+                        <!-- Box for RISK_ASSESSMENT -->
+                        <section class="col-lg-4 connectedSortable">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Risk Assessment</h3>
+                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
+                                </div>
+                                <div class="card-body">
+                                    <div id="risk-assessment-chart" style="height: 400px"></div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section class="col-lg-4 connectedSortable">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Risk Assessment</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>This chart provides an overview of risk assessments across different competitors.
+                                        It highlights the level of risk associated with each competitor.</p>
+                                    <div class="info-card">
+                                        <h4>Key Insights:</h4>
+                                        <ul>
+                                            <li>Competitor A faces the highest risk level.</li>
+                                            <li>Competitor B has a moderate risk profile.</li>
+                                            <li>Competitor C has the lowest risk assessment.</li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </section>
+                            </div>
+                        </section>
 
-                    </div>
+                        
+
+
+                        <!-- Box for RISK_FACTORS -->
+                        <section class="col-lg-4 connectedSortable">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Risk Factors</h3>
+                                    <div id="risk-factors-table" class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Risk Factor Name</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Risk Factor A</td>
+                                                    <td>Description of Risk Factor A.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Risk Factor B</td>
+                                                    <td>Description of Risk Factor B.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Risk Factor C</td>
+                                                    <td>Description of Risk Factor C.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                                <div class="card-body">
+                                    <div id="risk-factors-table" class="table-responsive"></div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Box for MITIGATION_STRATEGIES -->
+                        <section class="col-lg-4 connectedSortable">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Mitigation Strategies</h3>
+                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
+                                </div>
+                                <div class="card-body">
+                                    <div id="mitigation-strategies-chart" style="height: 400px"></div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="col-lg-8 connectedSortable">
+                            <div class="card">
+                              <div class="card-header">
+                                <h3 class="card-title">Mitigation Strategies</h3>
+                              </div>
+                              <div class="card-body">
+                                <p>This chart shows the distribution of mitigation strategies used to address various risks. It helps in understanding the strategies employed to mitigate risk factors.</p>
+                                <div class="info-card">
+                                  <h4>Mitigation Strategies Summary:</h4>
+                                  <ul>
+                                    <li>Strategy A is most frequently used to address risks.</li>
+                                    <li>Strategy B is employed for moderate-risk situations.</li>
+                                    <li>Strategy C is less commonly used but essential for certain risks.</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          
+
+
+                        <!-- Box for CONTINGENCY_PLANS -->
+                        <section class="col-lg-12 connectedSortable">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Contingency Plans</h3>
+                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
+                                </div>
+                                <div class="card-body">
+                                    <div id="contingency-plans-table" class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Contingency Plan</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Plan A</td>
+                                                    <td>Description of Contingency Plan A.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Plan B</td>
+                                                    <td>Description of Contingency Plan B.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Plan C</td>
+                                                    <td>Description of Contingency Plan C.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+
+
+
             </section>
 
             <section class="col-lg-3 connectedSortable">
@@ -409,126 +522,104 @@
     <!-- Custom JS -->
     <script>
         Highcharts.setOptions({
-        chart: {
-          backgroundColor: "#333", // Dark background
-          style: {
-            color: "#fff", // Light text color
-          },
-        },
-        title: {
-          style: {
-            color: "#fff", // Light title color
-          },
-        },
-        xAxis: {
-          labels: {
-            style: {
-              color: "#fff", // Light x-axis labels color
+            chart: {
+                backgroundColor: "#333", // Dark background
+                style: {
+                    color: "#fff", // Light text color
+                },
             },
-          },
-          title: {
-            style: {
-              color: "#fff", // Light x-axis title color
+            title: {
+                style: {
+                    color: "#fff", // Light title color
+                },
             },
-          },
-        },
-        yAxis: {
-          labels: {
-            style: {
-              color: "#fff", // Light y-axis labels color
+            xAxis: {
+                labels: {
+                    style: {
+                        color: "#fff", // Light x-axis labels color
+                    },
+                },
+                title: {
+                    style: {
+                        color: "#fff", // Light x-axis title color
+                    },
+                },
             },
-          },
-          title: {
-            style: {
-              color: "#fff", // Light y-axis title color
+            yAxis: {
+                labels: {
+                    style: {
+                        color: "#fff", // Light y-axis labels color
+                    },
+                },
+                title: {
+                    style: {
+                        color: "#fff", // Light y-axis title color
+                    },
+                },
             },
-          },
-        },
-        tooltip: {
-          backgroundColor: "#000", // Dark tooltip background
-          style: {
-            color: "#fff", // Light tooltip text color
-          },
-        },
-        plotOptions: {
-          series: {
-            color: "red", // Default series color
-          },
-        },
-      });
-     document.addEventListener("DOMContentLoaded", function () {
-        Highcharts.chart('regulatory-landscape-chart', {
-  chart: { type: 'column' },
-  title: { text: 'Regulatory Landscape by Region' },
-  xAxis: {
-    categories: ['Region A', 'Region B', 'Region C'], // Replace with actual data
-    title: { text: 'Regions' }
-  },
-  yAxis: {
-    title: { text: 'Impact Level' },
-    labels: {
-      formatter: function () {
-        return this.value + '%'; // Append '%' to y-axis labels
-      },
-    },
-  },
-  series: [{
-    name: 'Impact on Competition',
-    data: [20, 40, 60], // Replace with actual data
-    color: '#007bff' // Optional: change color
-  }],
-});
+            tooltip: {
+                backgroundColor: "#000", // Dark tooltip background
+                style: {
+                    color: "#fff", // Light tooltip text color
+                },
+            },
+            plotOptions: {
+                series: {
+                    color: "red", // Default series color
+                },
+            },
+        });
+        Highcharts.chart('risk-assessment-chart', {
+            chart: { type: 'bar' },
+            title: { text: 'Risk Assessment Overview' },
+            xAxis: {
+                categories: ['Competitor A', 'Competitor B', 'Competitor C'], // Replace with actual data
+                title: { text: 'Competitors' }
+            },
+            yAxis: {
+                title: { text: 'Risk Levels' },
+                labels: {
+                    formatter: function () {
+                        return this.value; // No units needed
+                    },
+                },
+            },
+            series: [{
+                name: 'Risk Level',
+                data: [4, 3, 5], // Replace with actual data
+                color: '#dc3545' // Optional: change color
+            }],
+        });
 
-Highcharts.chart('regulatory-frameworks-chart', {
-  chart: { type: 'pie' },
-  title: { text: 'Regulatory Frameworks Distribution' },
-  plotOptions: {
-    pie: {
-      dataLabels: {
-        enabled: true,
-        formatter: function () {
-          return this.point.name + ': ' + this.point.y + ' units'; // Append 'units' to data labels
-        },
-        style: {
-          color: '#fff',
-          textOutline: false,
-        },
-      },
-    },
-  },
-  series: [{
-    name: 'Frameworks',
-    data: [
-      ['Framework A', 30], // Replace with actual data
-      ['Framework B', 20],
-      ['Framework C', 50]
-    ],
-  }],
-});
+        Highcharts.chart('mitigation-strategies-chart', {
+            chart: { type: 'pie' },
+            title: { text: 'Mitigation Strategies Distribution' },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: true,
+                        formatter: function () {
+                            return this.point.name + ': ' + this.point.y; // Display strategy count
+                        },
+                        style: {
+                            color: '#fff',
+                            textOutline: false,
+                        },
+                    },
+                },
+            },
+            series: [{
+                name: 'Strategies',
+                data: [
+                    ['Strategy A', 20], // Replace with actual data
+                    ['Strategy B', 30],
+                    ['Strategy C', 50]
+                ],
+            }],
+        });
 
-Highcharts.chart('regulatory-changes-chart', {
-  chart: { type: 'bar' },
-  title: { text: 'Regulatory Changes by Type' },
-  xAxis: {
-    categories: ['Change A', 'Change B', 'Change C'], // Replace with actual data
-    title: { text: 'Changes' }
-  },
-  yAxis: {
-    title: { text: 'Number of Changes' },
-    labels: {
-      formatter: function () {
-        return this.value; // No units needed
-      },
-    },
-  },
-  series: [{
-    name: 'Changes',
-    data: [5, 8, 3], // Replace with actual data
-    color: '#28a745' // Optional: change color
-  }],
-});
 
-     });
+
     </script>
 
 </body>
