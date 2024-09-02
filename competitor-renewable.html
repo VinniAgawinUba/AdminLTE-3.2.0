@@ -38,7 +38,7 @@
                             Dashboard
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            Competitor Market Strategies
+                            Competitor Pricing
                         </li>
                     </ol>
                 </nav>
@@ -181,11 +181,11 @@
                                                 <i class="fas fa-cogs nav-icon"></i>
                                                 <p>Techno Innovations</p>
                                             </a>
-                                            <a href="competitor-renewable.html" class="nav-link">
+                                            <a href="competitor-renewable.html" class="nav-link active">
                                                 <i class="fas fa-sun nav-icon"></i>
                                                 <p>Renewable Energy</p>
                                             </a>
-                                            <a href="competitor-marketstrategies.html" class="nav-link active">
+                                            <a href="competitor-marketstrategies.html" class="nav-link">
                                                 <i class="fas fa-bullseye nav-icon"></i>
                                                 <p>Market Strategies</p>
                                             </a>
@@ -255,7 +255,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Market Strategies</h1>
+                            <h1 class="m-0">Competitor Renewable Energies</h1>
                             <div class="dropdown">
                                 <button class="btn btn-primary dropdown-toggle" type="button" id="competitorDropdown"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -322,79 +322,166 @@
                     <!-- Main row -->
                     <div class="row">
                         <!-- Left col -->
-                        <!-- Informational Cards for Market Strategies -->
-                        <section class="col-lg-6 connectedSortable">
+                        <!-- RENEWABLE_ENERGY_INTEGRATION Table -->
+                        <section class="col-lg-12 connectedSortable">
                             <div class="card">
+                                <section class="col-lg-3">
+                                <div id="renewable-energy-pie-chart" style="height: 400px;"></div>
+                                </section>
+                                
                                 <div class="card-header">
-                                    <h3 class="card-title">Market Strategies</h3>
+                                    <h3 class="card-title">Renewable Energy Integration</h3>
                                 </div>
                                 <div class="card-body">
-                                    <p>Here you can see the distribution of market strategies among different
-                                        competitors. This chart shows how each competitor is positioning themselves in
-                                        the market.</p>
-                                    <div class="info-card">
-                                        <h4>Top Strategies:</h4>
-                                        <ul>
-                                            <li>Competitor A: Focuses on aggressive market penetration.</li>
-                                            <li>Competitor B: Prioritizes product innovation.</li>
-                                            <li>Competitor C: Leverages cost leadership.</li>
-                                        </ul>
-                                    </div>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>RENEWABLE_ID</th>
+                                                <th>COMPETITOR_ID</th>
+                                                <th>RENEWABLE_PROPORTION (%)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>101</td>
+                                                <td>45.5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>102</td>
+                                                <td>30.0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>103</td>
+                                                <td>65.8</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>104</td>
+                                                <td>22.3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>105</td>
+                                                <td>50.0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </section>
 
-                        <!-- Box for MARKET_STRATEGIES -->
-                        <section class="col-lg-6 connectedSortable">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Market Strategies</h3>
-                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
-                                </div>
-                                <div class="card-body">
-                                    <div id="market-strategies-chart" style="height: 400px"></div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Box for ENTRY_BARRIERS -->
-                        <section class="col-lg-6 connectedSortable">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Entry Barriers</h3>
-                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
-                                </div>
-                                <div class="card-body">
-                                    <div id="entry-barriers-chart" style="height: 400px"></div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Box for EXPANSION_STRATEGIES -->
-                        <section class="col-lg-6 connectedSortable">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Expansion Strategies</h3>
-                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
-                                </div>
-                                <div class="card-body">
-                                    <div id="expansion-strategies-chart" style="height: 400px"></div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Box for MERGERS_ACQUISITIONS -->
+                        <!-- RENEWABLE_ENERGY_TECHNOLOGIES Table -->
                         <section class="col-lg-12 connectedSortable">
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title">Mergers & Acquisitions</h3>
-                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
+                                    <h3 class="card-title">Renewable Energy Technologies</h3>
                                 </div>
                                 <div class="card-body">
-                                    <div id="mergers-acquisitions-chart" style="height: 400px"></div>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>RENEWABLE_TECHNOLOGY_ID</th>
+                                                <th>RENEWABLE_ID</th>
+                                                <th>RENEWABLE_TECHNOLOGY_NAME</th>
+                                                <th>RENEWABLE_TECHNOLOGY_DESCRIPTION</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>Solar Panels</td>
+                                                <td>Photovoltaic systems converting sunlight into electricity.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>2</td>
+                                                <td>Wind Turbines</td>
+                                                <td>Turbines that harness wind energy to generate power.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>3</td>
+                                                <td>Hydropower</td>
+                                                <td>Systems using water flow to produce electricity.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>4</td>
+                                                <td>Geothermal Energy</td>
+                                                <td>Technology harnessing heat from the Earth to generate energy.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>Biomass</td>
+                                                <td>Energy production from organic materials.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </section>
+
+                        <!-- RENEWABLE_ENERGY_SUSTAINABILITY_EFFORTS Table -->
+                        <section class="col-lg-12 connectedSortable">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Renewable Energy Sustainability Efforts</h3>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>SUSTAINABILITY_EFFORT_ID</th>
+                                                <th>RENEWABLE_ID</th>
+                                                <th>SUSTAINABILITY_EFFORT_NAME</th>
+                                                <th>SUSTAINABILITY_EFFORT_DESCRIPTION</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>Carbon Footprint Reduction</td>
+                                                <td>Efforts to minimize carbon emissions through renewable energy.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>2</td>
+                                                <td>Energy Efficiency Programs</td>
+                                                <td>Initiatives aimed at reducing energy consumption and waste.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>3</td>
+                                                <td>Water Conservation</td>
+                                                <td>Programs focused on reducing water usage in energy production.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>4</td>
+                                                <td>Waste Management</td>
+                                                <td>Strategies for recycling and reducing waste in energy processes.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>Sustainable Sourcing</td>
+                                                <td>Efforts to use renewable resources from sustainable sources.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+
+
 
 
                     </div>
@@ -452,148 +539,100 @@
     <!-- Custom JS -->
     <script>
         Highcharts.setOptions({
-            chart: {
-                backgroundColor: "#333", // Dark background
-                style: {
-                    color: "#fff", // Light text color
-                },
+        chart: {
+          backgroundColor: "#333", // Dark background
+          style: {
+            color: "#fff", // Light text color
+          },
+        },
+        title: {
+          style: {
+            color: "#fff", // Light title color
+          },
+        },
+        xAxis: {
+          labels: {
+            style: {
+              color: "#fff", // Light x-axis labels color
             },
+          },
+          title: {
+            style: {
+              color: "#fff", // Light x-axis title color
+            },
+          },
+        },
+        yAxis: {
+          labels: {
+            style: {
+              color: "#fff", // Light y-axis labels color
+            },
+          },
+          title: {
+            style: {
+              color: "#fff", // Light y-axis title color
+            },
+          },
+        },
+        tooltip: {
+          backgroundColor: "#000", // Dark tooltip background
+          style: {
+            color: "#fff", // Light tooltip text color
+          },
+        },
+        plotOptions: {
+          series: {
+            color: "red", // Default series color
+          },
+        },
+      });
+        Highcharts.chart('renewable-energy-pie-chart', {
+          chart: {
+            type: 'pie'
+          },
+          title: {
+            text: 'Renewable Energy Sources Proportion'
+          },
+          series: [{
+            name: 'Sources',
+            data: [
+              { name: 'Solar', y: 35 },
+              { name: 'Wind', y: 25 },
+              { name: 'Hydropower', y: 20 },
+              { name: 'Geothermal', y: 10 },
+              { name: 'Biomass', y: 10 }
+            ]
+          }]
+        });
+      </script>
+      
+
+      <script>
+        Highcharts.chart('renewable-energy-bar-chart', {
+          chart: {
+            type: 'bar'
+          },
+          title: {
+            text: 'Adoption Rates of Renewable Technologies'
+          },
+          xAxis: {
+            categories: ['Solar Panels', 'Wind Turbines', 'Hydropower', 'Geothermal', 'Biomass']
+          },
+          yAxis: {
             title: {
-                style: {
-                    color: "#fff", // Light title color
-                },
-            },
-            xAxis: {
-                labels: {
-                    style: {
-                        color: "#fff", // Light x-axis labels color
-                    },
-                },
-                title: {
-                    style: {
-                        color: "#fff", // Light x-axis title color
-                    },
-                },
-            },
-            yAxis: {
-                labels: {
-                    style: {
-                        color: "#fff", // Light y-axis labels color
-                    },
-                },
-                title: {
-                    style: {
-                        color: "#fff", // Light y-axis title color
-                    },
-                },
-            },
-            tooltip: {
-                backgroundColor: "#000", // Dark tooltip background
-                style: {
-                    color: "#fff", // Light tooltip text color
-                },
-            },
-            plotOptions: {
-                series: {
-                    color: "red", // Default series color
-                },
-            },
+              text: 'Adoption Rate (%)'
+            }
+          },
+          series: [{
+            name: 'Competitor A',
+            data: [50, 40, 30, 20, 10]
+          }, {
+            name: 'Competitor B',
+            data: [45, 35, 25, 15, 5]
+          }]
         });
-        Highcharts.chart('market-strategies-chart', {
-            chart: { type: 'column' },
-            title: { text: 'Market Strategies by Competitor' },
-            xAxis: {
-                categories: ['Competitor A', 'Competitor B', 'Competitor C'], // Replace with actual data
-                title: { text: 'Competitors' }
-            },
-            yAxis: {
-                title: { text: 'Number of Strategies' },
-                labels: {
-                    formatter: function () {
-                        return this.value; // No units needed
-                    },
-                },
-            },
-            series: [{
-                name: 'Strategies',
-                data: [10, 20, 30], // Replace with actual data
-                color: '#17a2b8' // Optional: change color
-            }],
-        });
-
-        Highcharts.chart('entry-barriers-chart', {
-            chart: { type: 'pie' },
-            title: { text: 'Entry Barriers Distribution' },
-            plotOptions: {
-                pie: {
-                    dataLabels: {
-                        enabled: true,
-                        formatter: function () {
-                            return this.point.name + ': ' + this.point.y; // Display barrier count
-                        },
-                        style: {
-                            color: '#fff',
-                            textOutline: false,
-                        },
-                    },
-                },
-            },
-            series: [{
-                name: 'Entry Barriers',
-                data: [
-                    ['Barrier A', 5], // Replace with actual data
-                    ['Barrier B', 8],
-                    ['Barrier C', 12]
-                ],
-            }],
-        });
-
-        Highcharts.chart('expansion-strategies-chart', {
-            chart: { type: 'bar' },
-            title: { text: 'Expansion Strategies by Competitor' },
-            xAxis: {
-                categories: ['Competitor A', 'Competitor B', 'Competitor C'], // Replace with actual data
-                title: { text: 'Competitors' }
-            },
-            yAxis: {
-                title: { text: 'Number of Strategies' },
-                labels: {
-                    formatter: function () {
-                        return this.value; // No units needed
-                    },
-                },
-            },
-            series: [{
-                name: 'Strategies',
-                data: [8, 15, 20], // Replace with actual data
-                color: '#28a745' // Optional: change color
-            }],
-        });
-
-        Highcharts.chart('mergers-acquisitions-chart', {
-            chart: { type: 'column' },
-            title: { text: 'Mergers & Acquisitions by Competitor' },
-            xAxis: {
-                categories: ['Competitor A', 'Competitor B', 'Competitor C'], // Replace with actual data
-                title: { text: 'Competitors' }
-            },
-            yAxis: {
-                title: { text: 'Number of Mergers/Acquisitions' },
-                labels: {
-                    formatter: function () {
-                        return this.value; // No units needed
-                    },
-                },
-            },
-            series: [{
-                name: 'Mergers & Acquisitions',
-                data: [2, 5, 3], // Replace with actual data
-                color: '#dc3545' // Optional: change color
-            }],
-        });
-
-
-    </script>
+      </script>
+      
 
 </body>
 

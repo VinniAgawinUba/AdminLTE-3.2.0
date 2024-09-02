@@ -38,7 +38,7 @@
                             Dashboard
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            Competitor Market Strategies
+                            Competitor Pricing
                         </li>
                     </ol>
                 </nav>
@@ -177,7 +177,7 @@
                                                 <i class="fas fa-tag nav-icon"></i>
                                                 <p>Pricing</p>
                                             </a>
-                                            <a href="competitor-tech.html" class="nav-link">
+                                            <a href="competitor-tech.html" class="nav-link active">
                                                 <i class="fas fa-cogs nav-icon"></i>
                                                 <p>Techno Innovations</p>
                                             </a>
@@ -185,7 +185,7 @@
                                                 <i class="fas fa-sun nav-icon"></i>
                                                 <p>Renewable Energy</p>
                                             </a>
-                                            <a href="competitor-marketstrategies.html" class="nav-link active">
+                                            <a href="competitor-marketstrategies.html" class="nav-link">
                                                 <i class="fas fa-bullseye nav-icon"></i>
                                                 <p>Market Strategies</p>
                                             </a>
@@ -255,7 +255,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Market Strategies</h1>
+                            <h1 class="m-0">Competitor Technological Innovations</h1>
                             <div class="dropdown">
                                 <button class="btn btn-primary dropdown-toggle" type="button" id="competitorDropdown"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -322,79 +322,160 @@
                     <!-- Main row -->
                     <div class="row">
                         <!-- Left col -->
-                        <!-- Informational Cards for Market Strategies -->
-                        <section class="col-lg-6 connectedSortable">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Market Strategies</h3>
-                                </div>
-                                <div class="card-body">
-                                    <p>Here you can see the distribution of market strategies among different
-                                        competitors. This chart shows how each competitor is positioning themselves in
-                                        the market.</p>
-                                    <div class="info-card">
-                                        <h4>Top Strategies:</h4>
-                                        <ul>
-                                            <li>Competitor A: Focuses on aggressive market penetration.</li>
-                                            <li>Competitor B: Prioritizes product innovation.</li>
-                                            <li>Competitor C: Leverages cost leadership.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+                        <!-- TECHNOLOGICAL_INNOVATION Table -->
+<section class="col-lg-12 connectedSortable">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Technological Innovation</h3>
+      </div>
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>INNOVATION_ID</th>
+              <th>TECHNOLOGY_NAME</th>
+              <th>TECHNOLOGY_DESCRIPTION</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Artificial Intelligence</td>
+              <td>Advanced algorithms that simulate human intelligence, enabling machines to learn and make decisions.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Blockchain</td>
+              <td>Distributed ledger technology providing transparency and security in transactions.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>5G Network</td>
+              <td>Next-generation wireless network technology offering faster speeds and lower latency.</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Internet of Things (IoT)</td>
+              <td>Network of interconnected devices communicating and sharing data in real-time.</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Quantum Computing</td>
+              <td>Computing technology leveraging quantum mechanics to perform complex calculations at unprecedented speeds.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  
+  <!-- TECHNOLOGY_IMPACT Table -->
+  <section class="col-lg-12 connectedSortable">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Technology Impact</h3>
+      </div>
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>TECHNOLOGY_IMPACT_ID</th>
+              <th>INNOVATION_ID</th>
+              <th>TECHNOLOGY_IMPACT_NAME</th>
+              <th>TECHNOLOGY_IMPACT_DESCRIPTION</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>Efficiency Enhancement</td>
+              <td>AI automates tasks, reducing manual labor and increasing efficiency.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>2</td>
+              <td>Security Improvement</td>
+              <td>Blockchain ensures secure and transparent transactions, reducing fraud risks.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>3</td>
+              <td>Connectivity Expansion</td>
+              <td>5G enables real-time communication between devices, enhancing connectivity.</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>4</td>
+              <td>Data Integration</td>
+              <td>IoT integrates data from various devices, providing valuable insights.</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>5</td>
+              <td>Computational Power Boost</td>
+              <td>Quantum Computing accelerates complex problem-solving, surpassing traditional computing limitations.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  
+  <!-- COMPETITOR_ADOPTION Table -->
+  <section class="col-lg-12 connectedSortable">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Competitor Adoption</h3>
+      </div>
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>ADOPTION_ID</th>
+              <th>INNOVATION_ID</th>
+              <th>ADOPTION_NAME</th>
+              <th>ADOPTION_DESCRIPTION</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>Early Adopter</td>
+              <td>The competitor has integrated AI into its processes early, gaining a competitive advantage.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>2</td>
+              <td>Gradual Adoption</td>
+              <td>The competitor is gradually incorporating Blockchain for secure transactions.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>3</td>
+              <td>Full Integration</td>
+              <td>The competitor has fully integrated 5G into its network, offering superior services.</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>4</td>
+              <td>Pilot Testing</td>
+              <td>The competitor is currently pilot-testing IoT applications for operational efficiency.</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>5</td>
+              <td>Research Phase</td>
+              <td>The competitor is in the research phase of Quantum Computing, exploring its potential.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  
 
-                        <!-- Box for MARKET_STRATEGIES -->
-                        <section class="col-lg-6 connectedSortable">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Market Strategies</h3>
-                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
-                                </div>
-                                <div class="card-body">
-                                    <div id="market-strategies-chart" style="height: 400px"></div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Box for ENTRY_BARRIERS -->
-                        <section class="col-lg-6 connectedSortable">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Entry Barriers</h3>
-                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
-                                </div>
-                                <div class="card-body">
-                                    <div id="entry-barriers-chart" style="height: 400px"></div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Box for EXPANSION_STRATEGIES -->
-                        <section class="col-lg-6 connectedSortable">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Expansion Strategies</h3>
-                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
-                                </div>
-                                <div class="card-body">
-                                    <div id="expansion-strategies-chart" style="height: 400px"></div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Box for MERGERS_ACQUISITIONS -->
-                        <section class="col-lg-12 connectedSortable">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Mergers & Acquisitions</h3>
-                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
-                                </div>
-                                <div class="card-body">
-                                    <div id="mergers-acquisitions-chart" style="height: 400px"></div>
-                                </div>
-                            </div>
-                        </section>
 
 
                     </div>
@@ -450,150 +531,7 @@
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
     <!-- Custom JS -->
-    <script>
-        Highcharts.setOptions({
-            chart: {
-                backgroundColor: "#333", // Dark background
-                style: {
-                    color: "#fff", // Light text color
-                },
-            },
-            title: {
-                style: {
-                    color: "#fff", // Light title color
-                },
-            },
-            xAxis: {
-                labels: {
-                    style: {
-                        color: "#fff", // Light x-axis labels color
-                    },
-                },
-                title: {
-                    style: {
-                        color: "#fff", // Light x-axis title color
-                    },
-                },
-            },
-            yAxis: {
-                labels: {
-                    style: {
-                        color: "#fff", // Light y-axis labels color
-                    },
-                },
-                title: {
-                    style: {
-                        color: "#fff", // Light y-axis title color
-                    },
-                },
-            },
-            tooltip: {
-                backgroundColor: "#000", // Dark tooltip background
-                style: {
-                    color: "#fff", // Light tooltip text color
-                },
-            },
-            plotOptions: {
-                series: {
-                    color: "red", // Default series color
-                },
-            },
-        });
-        Highcharts.chart('market-strategies-chart', {
-            chart: { type: 'column' },
-            title: { text: 'Market Strategies by Competitor' },
-            xAxis: {
-                categories: ['Competitor A', 'Competitor B', 'Competitor C'], // Replace with actual data
-                title: { text: 'Competitors' }
-            },
-            yAxis: {
-                title: { text: 'Number of Strategies' },
-                labels: {
-                    formatter: function () {
-                        return this.value; // No units needed
-                    },
-                },
-            },
-            series: [{
-                name: 'Strategies',
-                data: [10, 20, 30], // Replace with actual data
-                color: '#17a2b8' // Optional: change color
-            }],
-        });
-
-        Highcharts.chart('entry-barriers-chart', {
-            chart: { type: 'pie' },
-            title: { text: 'Entry Barriers Distribution' },
-            plotOptions: {
-                pie: {
-                    dataLabels: {
-                        enabled: true,
-                        formatter: function () {
-                            return this.point.name + ': ' + this.point.y; // Display barrier count
-                        },
-                        style: {
-                            color: '#fff',
-                            textOutline: false,
-                        },
-                    },
-                },
-            },
-            series: [{
-                name: 'Entry Barriers',
-                data: [
-                    ['Barrier A', 5], // Replace with actual data
-                    ['Barrier B', 8],
-                    ['Barrier C', 12]
-                ],
-            }],
-        });
-
-        Highcharts.chart('expansion-strategies-chart', {
-            chart: { type: 'bar' },
-            title: { text: 'Expansion Strategies by Competitor' },
-            xAxis: {
-                categories: ['Competitor A', 'Competitor B', 'Competitor C'], // Replace with actual data
-                title: { text: 'Competitors' }
-            },
-            yAxis: {
-                title: { text: 'Number of Strategies' },
-                labels: {
-                    formatter: function () {
-                        return this.value; // No units needed
-                    },
-                },
-            },
-            series: [{
-                name: 'Strategies',
-                data: [8, 15, 20], // Replace with actual data
-                color: '#28a745' // Optional: change color
-            }],
-        });
-
-        Highcharts.chart('mergers-acquisitions-chart', {
-            chart: { type: 'column' },
-            title: { text: 'Mergers & Acquisitions by Competitor' },
-            xAxis: {
-                categories: ['Competitor A', 'Competitor B', 'Competitor C'], // Replace with actual data
-                title: { text: 'Competitors' }
-            },
-            yAxis: {
-                title: { text: 'Number of Mergers/Acquisitions' },
-                labels: {
-                    formatter: function () {
-                        return this.value; // No units needed
-                    },
-                },
-            },
-            series: [{
-                name: 'Mergers & Acquisitions',
-                data: [2, 5, 3], // Replace with actual data
-                color: '#dc3545' // Optional: change color
-            }],
-        });
-
-
-    </script>
+    
 
 </body>
 

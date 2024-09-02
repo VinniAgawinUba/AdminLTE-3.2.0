@@ -38,7 +38,7 @@
                             Dashboard
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            Competitor Market Strategies
+                            Competitor Pricing
                         </li>
                     </ol>
                 </nav>
@@ -173,7 +173,7 @@
                                     </a>
                                     <ul class="nav nav-treeview menu-open">
                                         <li class="nav-item">
-                                            <a href="competitor-pricing.html" class="nav-link">
+                                            <a href="competitor-pricing.html" class="nav-link active">
                                                 <i class="fas fa-tag nav-icon"></i>
                                                 <p>Pricing</p>
                                             </a>
@@ -185,7 +185,7 @@
                                                 <i class="fas fa-sun nav-icon"></i>
                                                 <p>Renewable Energy</p>
                                             </a>
-                                            <a href="competitor-marketstrategies.html" class="nav-link active">
+                                            <a href="competitor-marketstrategies.html" class="nav-link">
                                                 <i class="fas fa-bullseye nav-icon"></i>
                                                 <p>Market Strategies</p>
                                             </a>
@@ -255,7 +255,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Market Strategies</h1>
+                            <h1 class="m-0">Pricing</h1>
                             <div class="dropdown">
                                 <button class="btn btn-primary dropdown-toggle" type="button" id="competitorDropdown"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -322,79 +322,179 @@
                     <!-- Main row -->
                     <div class="row">
                         <!-- Left col -->
-                        <!-- Informational Cards for Market Strategies -->
-                        <section class="col-lg-6 connectedSortable">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Market Strategies</h3>
-                                </div>
-                                <div class="card-body">
-                                    <p>Here you can see the distribution of market strategies among different
-                                        competitors. This chart shows how each competitor is positioning themselves in
-                                        the market.</p>
-                                    <div class="info-card">
-                                        <h4>Top Strategies:</h4>
-                                        <ul>
-                                            <li>Competitor A: Focuses on aggressive market penetration.</li>
-                                            <li>Competitor B: Prioritizes product innovation.</li>
-                                            <li>Competitor C: Leverages cost leadership.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Box for MARKET_STRATEGIES -->
-                        <section class="col-lg-6 connectedSortable">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Market Strategies</h3>
-                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
-                                </div>
-                                <div class="card-body">
-                                    <div id="market-strategies-chart" style="height: 400px"></div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Box for ENTRY_BARRIERS -->
-                        <section class="col-lg-6 connectedSortable">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Entry Barriers</h3>
-                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
-                                </div>
-                                <div class="card-body">
-                                    <div id="entry-barriers-chart" style="height: 400px"></div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Box for EXPANSION_STRATEGIES -->
-                        <section class="col-lg-6 connectedSortable">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Expansion Strategies</h3>
-                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
-                                </div>
-                                <div class="card-body">
-                                    <div id="expansion-strategies-chart" style="height: 400px"></div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Box for MERGERS_ACQUISITIONS -->
+                        <!-- PRICING Table -->
                         <section class="col-lg-12 connectedSortable">
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title">Mergers & Acquisitions</h3>
-                                    <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
+                                    <h3 class="card-title">Pricing</h3>
                                 </div>
                                 <div class="card-body">
-                                    <div id="mergers-acquisitions-chart" style="height: 400px"></div>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>PRICING_ID</th>
+                                                <th>COMPETITOR_ID</th>
+                                                <th>MARKET_POSITION_IMPACT</th>
+                                                <th>PRICE</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>Premium pricing has positioned the competitor as a high-end brand.
+                                                </td>
+                                                <td>$499.99</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>2</td>
+                                                <td>Competitive pricing has helped capture market share in mid-range
+                                                    segments.</td>
+                                                <td>$299.99</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>3</td>
+                                                <td>Low pricing has enabled the competitor to dominate the budget
+                                                    segment.</td>
+                                                <td>$199.99</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>4</td>
+                                                <td>Dynamic pricing has increased flexibility in response to market
+                                                    changes.</td>
+                                                <td>$399.99</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>Value-based pricing aligns with customer perceptions of product
+                                                    value.</td>
+                                                <td>$349.99</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </section>
+
+                        <!-- PRICING_MODELS Table -->
+                        <section class="col-lg-12 connectedSortable">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Pricing Models</h3>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>PRICING_MODEL_ID</th>
+                                                <th>PRICING_ID</th>
+                                                <th>PRICING_MODEL_NAME</th>
+                                                <th>PRICING_MODEL_DESCRIPTION</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>Subscription</td>
+                                                <td>Customers pay a recurring fee to access the product/service.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>2</td>
+                                                <td>Freemium</td>
+                                                <td>Basic services are free, while premium features require payment.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>3</td>
+                                                <td>Pay-Per-Use</td>
+                                                <td>Customers are charged based on their actual usage of the
+                                                    product/service.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>4</td>
+                                                <td>Tiered Pricing</td>
+                                                <td>Different price levels are offered based on the features and
+                                                    services provided.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>Dynamic Pricing</td>
+                                                <td>Prices change based on market demand, competition, and other
+                                                    factors.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- PRICING_STRATEGIES Table -->
+                        <section class="col-lg-12 connectedSortable">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Pricing Strategies</h3>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>PRICING_STRATEGY_ID</th>
+                                                <th>PRICING_ID</th>
+                                                <th>PRICING_STRATEGY_NAME</th>
+                                                <th>PRICING_STRATEGY_DESCRIPTION</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>Skimming</td>
+                                                <td>Setting a high price initially and lowering it over time to maximize
+                                                    profits.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>2</td>
+                                                <td>Penetration</td>
+                                                <td>Setting a low price to enter the market and then raising it as
+                                                    market share increases.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>3</td>
+                                                <td>Cost-Plus</td>
+                                                <td>Adding a markup to the cost of production to determine the selling
+                                                    price.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>4</td>
+                                                <td>Competitive</td>
+                                                <td>Setting prices based on what competitors are charging to remain
+                                                    competitive.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>5</td>
+                                                <td>Value-Based</td>
+                                                <td>Setting prices based on the perceived value to the customer rather
+                                                    than the cost of production.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
 
 
                     </div>
@@ -449,151 +549,7 @@
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-    <!-- Custom JS -->
-    <script>
-        Highcharts.setOptions({
-            chart: {
-                backgroundColor: "#333", // Dark background
-                style: {
-                    color: "#fff", // Light text color
-                },
-            },
-            title: {
-                style: {
-                    color: "#fff", // Light title color
-                },
-            },
-            xAxis: {
-                labels: {
-                    style: {
-                        color: "#fff", // Light x-axis labels color
-                    },
-                },
-                title: {
-                    style: {
-                        color: "#fff", // Light x-axis title color
-                    },
-                },
-            },
-            yAxis: {
-                labels: {
-                    style: {
-                        color: "#fff", // Light y-axis labels color
-                    },
-                },
-                title: {
-                    style: {
-                        color: "#fff", // Light y-axis title color
-                    },
-                },
-            },
-            tooltip: {
-                backgroundColor: "#000", // Dark tooltip background
-                style: {
-                    color: "#fff", // Light tooltip text color
-                },
-            },
-            plotOptions: {
-                series: {
-                    color: "red", // Default series color
-                },
-            },
-        });
-        Highcharts.chart('market-strategies-chart', {
-            chart: { type: 'column' },
-            title: { text: 'Market Strategies by Competitor' },
-            xAxis: {
-                categories: ['Competitor A', 'Competitor B', 'Competitor C'], // Replace with actual data
-                title: { text: 'Competitors' }
-            },
-            yAxis: {
-                title: { text: 'Number of Strategies' },
-                labels: {
-                    formatter: function () {
-                        return this.value; // No units needed
-                    },
-                },
-            },
-            series: [{
-                name: 'Strategies',
-                data: [10, 20, 30], // Replace with actual data
-                color: '#17a2b8' // Optional: change color
-            }],
-        });
-
-        Highcharts.chart('entry-barriers-chart', {
-            chart: { type: 'pie' },
-            title: { text: 'Entry Barriers Distribution' },
-            plotOptions: {
-                pie: {
-                    dataLabels: {
-                        enabled: true,
-                        formatter: function () {
-                            return this.point.name + ': ' + this.point.y; // Display barrier count
-                        },
-                        style: {
-                            color: '#fff',
-                            textOutline: false,
-                        },
-                    },
-                },
-            },
-            series: [{
-                name: 'Entry Barriers',
-                data: [
-                    ['Barrier A', 5], // Replace with actual data
-                    ['Barrier B', 8],
-                    ['Barrier C', 12]
-                ],
-            }],
-        });
-
-        Highcharts.chart('expansion-strategies-chart', {
-            chart: { type: 'bar' },
-            title: { text: 'Expansion Strategies by Competitor' },
-            xAxis: {
-                categories: ['Competitor A', 'Competitor B', 'Competitor C'], // Replace with actual data
-                title: { text: 'Competitors' }
-            },
-            yAxis: {
-                title: { text: 'Number of Strategies' },
-                labels: {
-                    formatter: function () {
-                        return this.value; // No units needed
-                    },
-                },
-            },
-            series: [{
-                name: 'Strategies',
-                data: [8, 15, 20], // Replace with actual data
-                color: '#28a745' // Optional: change color
-            }],
-        });
-
-        Highcharts.chart('mergers-acquisitions-chart', {
-            chart: { type: 'column' },
-            title: { text: 'Mergers & Acquisitions by Competitor' },
-            xAxis: {
-                categories: ['Competitor A', 'Competitor B', 'Competitor C'], // Replace with actual data
-                title: { text: 'Competitors' }
-            },
-            yAxis: {
-                title: { text: 'Number of Mergers/Acquisitions' },
-                labels: {
-                    formatter: function () {
-                        return this.value; // No units needed
-                    },
-                },
-            },
-            series: [{
-                name: 'Mergers & Acquisitions',
-                data: [2, 5, 3], // Replace with actual data
-                color: '#dc3545' // Optional: change color
-            }],
-        });
-
-
-    </script>
+   
 
 </body>
 
