@@ -151,9 +151,9 @@
                     <i class="fas fa-book"></i>
                     <p>Regulatory Landscape</p>
                   </a>
-                  <a href="#" class="nav-link">
+                  <a href="customer_profile.html" class="nav-link">
                     <i class="fas fa-user-cog"></i>
-                    <p>Customer Preferences</p>
+                    <p>Customer Profile</p>
                   </a>
                   <a href="#" class="nav-link">
                     <i class="fas fa-cogs"></i>
@@ -321,10 +321,23 @@
               <!-- Box for MARKET_OVERVIEW -->
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">Market Overview</h3>
-                  <a href class="btn btn-sm btn-info float-right">View
-                    Details</a>
+                  <h3 class="px-1 card-title">Market Overview</h3>
+                  <a href class="btn btn-sm btn-info float-right">View Details</a>
+                  <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="regionDropdown" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      Market Segment
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="regionDropdown">
+                      <a class="dropdown-item" href="#">All</a>
+                      <a class="dropdown-item" href="#">High Growth Rate - High Market Share</a>
+                      <a class="dropdown-item" href="#">High Growth Rate - Low Market Share</a>
+                      <a class="dropdown-item" href="#">Low Growth Rate - High Market Share</a>
+                      <a class="dropdown-item" href="#">Low Growth Rate - Low Market Share</a>
+                    </div>
+                  </div>
                 </div>
+                
                 <div class="card-body">
                   <div class="card-footer">
                     <div class="row">
@@ -391,52 +404,7 @@
 
           <!-- Second row -->
           <div class="row">
-            <!-- Box for CUSTOMER_PREFERENCES -->
-            <section class="col-lg-12 connectedSortable">
-              <div class="row">
-                  <div class="col-lg-6">
-                      <div class="card">
-                          <div class="card-header">
-                              <h3 class="card-title">Customer Preferences</h3>
-                              <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
-                          </div>
-                          <div class="card-body">
-                              <div id="customer-preferences-chart" style="height: 400px;"></div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-6">
-                      <div class="card">
-                          <div class="card-header">
-                              <h3 class="card-title">Preference Factors</h3>
-                          </div>
-                          <div class="card-body">
-                              <div id="preference-factors-chart" style="height: 400px;"></div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-6">
-                      <div class="card">
-                          <div class="card-header">
-                              <h3 class="card-title">Emerging Trends</h3>
-                          </div>
-                          <div class="card-body">
-                              <div id="emerging-trends-chart" style="height: 400px;"></div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-6">
-                      <div class="card">
-                          <div class="card-header">
-                              <h3 class="card-title">Demographic Impact</h3>
-                          </div>
-                          <div class="card-body">
-                              <div id="demographic-impact-chart" style="height: 400px;"></div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </section>
+          
 
 
 
@@ -788,96 +756,7 @@
           },
         ],
       });
-      Highcharts.chart("customer-preferences-chart", {
-        chart: { type: "pie" },
-        title: { text: "Customer Preferences" },
-        plotOptions: {
-          pie: {
-            dataLabels: {
-              enabled: true,
-              formatter: function () {
-                return this.point.name + ": " + this.point.y + " units"; // Append 'units' to the data labels
-              },
-              style: {
-                color: "white", // Adjust color to ensure readability
-                textOutline: false, // Remove text outline
-              },
-            },
-          },
-        },
-        series: [
-          {
-            name: "Preferences",
-            data: [
-              ["Preference A", 45],
-              ["Preference B", 25],
-              ["Preference C", 30],
-            ],
-          },
-        ],
-      });
-
-      Highcharts.chart("preference-factors-chart", {
-        chart: { type: "bar" },
-        title: { text: "Preference Factors" },
-        xAxis: {
-          categories: ["Factor A", "Factor B", "Factor C"],
-          title: { text: "Factors" },
-        },
-        yAxis: {
-          title: { text: "Importance" },
-        },
-        series: [
-          {
-            name: "Factors",
-            data: [5, 7, 3], // Example data
-          },
-        ],
-      });
-
-      Highcharts.chart("emerging-trends-chart", {
-        chart: { type: "line" },
-        title: { text: "Emerging Trends" },
-        xAxis: {
-          categories: ["Trend A", "Trend B", "Trend C"],
-          title: { text: "Trends" },
-        },
-        yAxis: {
-          title: { text: "Impact" },
-        },
-        series: [
-          {
-            name: "Trends",
-            data: [2, 5, 4], // Example data
-          },
-        ],
-      });
-
-      Highcharts.chart("demographic-impact-chart", {
-        chart: { type: "pie" },
-        title: { text: "Demographic Impact" },
-        plotOptions: {
-          pie: {
-            innerSize: '50%', // Make it a donut chart
-            dataLabels: {
-              enabled: true,
-              formatter: function () {
-                return this.point.name + ": " + this.point.y + "%"; // Append '%' to the data labels
-              },
-            },
-          },
-        },
-        series: [
-          {
-            name: "Impact",
-            data: [
-              ["Impact A", 30],
-              ["Impact B", 50],
-              ["Impact C", 20],
-            ],
-          },
-        ],
-      });
+      
 
       const competitorChart = Highcharts.chart("competitor-analysis-chart", {
         chart: { type: "pie" },
