@@ -454,12 +454,13 @@
                       <div class="dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" id="regionDropdown" data-toggle="dropdown"
                           aria-haspopup="true" aria-expanded="false">
-                          CUSTOMER
+                          MARKET SEGMENT
                         </button>
                         <div class="dropdown-menu" aria-labelledby="regionDropdown">
-                          <a class="dropdown-item" href="#">Customer A</a>
-                          <a class="dropdown-item" href="#">Customer B</a>
-                          <a class="dropdown-item" href="#">Customer C</a>
+                          <a class="dropdown-item" href="#">Existing Customers</a>
+                          <a class="dropdown-item" href="#">Returning Customers</a>
+                          <a class="dropdown-item" href="#">Attriting</a>
+                          <a class="dropdown-item" href="#">Free For All</a>
                         </div>
                       </div>
                     </div>
@@ -479,6 +480,12 @@
                         <tbody>
                           <tr>
                             <td>Attribute</td>
+                            <td>Clean Energy</td>
+                            <td>+5</td>
+                            <td>Customers very much prefer clean energy</td>
+                          </tr>
+                          <tr>
+                            <td>Attribute</td>
                             <td>Competitive Price</td>
                             <td>+3</td>
                             <td>Customers generally prefer competitive pricing</td>
@@ -486,7 +493,7 @@
                           <tr>
                             <td>Belief</td>
                             <td>Sensitive to Price</td>
-                            <td>-1</td>
+                            <td>+1</td>
                             <td>Many customers are sensitive to price changes</td>
                           </tr>
                           <tr>
@@ -895,23 +902,23 @@
         series: [
           {
             name: 'Food & Beverage',
-            data: [5, 2, 1, 1, 1]
+            data: [5, 2, 1, 0, 0]
           },
           {
             name: 'Steel',
-            data: [3, 1, 2, 1, 1]
+            data: [7, 0, 0, 0, 0]
           },
           {
             name: 'School',
-            data: [1, 1, 1, 5, 1]
+            data: [0, 0, 0, 5, 0]
           },
           {
             name: 'Water',
-            data: [1, 1, 1, 5, 1]
+            data: [1, 0, 4, 0, 0]
           },
           {
             name: 'Fuel & Gas',
-            data: [1, 1, 1, 5, 1]
+            data: [2, 0, 1, 0, 0]
           }
         ]
       });
@@ -1001,7 +1008,7 @@
           min: -5,
           max: 5,
           title: {
-            text: 'Average Value'
+            text: 'Value'
           }
         },
         tooltip: {
@@ -1018,6 +1025,10 @@
           {
             name: 'Attributes',
             data: [3, -1, 1] // Example average value
+          },
+          {
+            name: 'Attributes',
+            data: [5, null, null] // Example average value
           },
 
         ]

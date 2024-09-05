@@ -17,6 +17,16 @@
 
     <!-- Custom CSS to OVERRIDE style -->
     <link rel="stylesheet" href="dist/css/custom.css" />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="dist/css/leaflet.css" />
+    <style>
+        /* Set the size of the map container */
+        #branch-map {
+            height: 40vh;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
@@ -269,347 +279,366 @@
                 </div>
             </div>
 
-            <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
-                    <!-- Info boxes -->
+                    <!-- Row 1: Background and Profile Image -->
                     <div class="row">
-                        <!-- Customer Name -->
-                        <div class="col-2 col-md-2 ">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-user"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Customer Name</span>
-                                    <span class="info-box-number">Customer Name</span>
+                        <div class="col-md-12 p-0">
+                            <div class="position-relative">
+                                <!-- Background Image -->
+                                <img src="dist/img/monster_inc.jpg" alt="Background Image" class=""
+                                    style="height: 50vh; width: 85vw;">
+                                <!-- Profile Image -->
+                            </div>
+                            <img src="dist/img/user1-128x128.jpg" alt="Profile Image" class="rounded-circle border">
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Main Content -->
+                    <div class="row mt-4">
+                        <!-- Left Column: Profile and Biography -->
+                        <div class="col-md-4">
+                            <!-- Profile Info -->
+                            <div class="mb-4">
+                                <h4 class="text-uppercase font-weight-bold">Monsters Inc.</h4>
+                                <h5 class="text-muted">Detail</h5>
+                            </div>
+                            <!-- Profile Details -->
+                            <div class="mb-4">
+                                <h6 class="text-uppercase font-weight-bold">Profile</h6>
+                                <p><strong>Location:</strong> Within PIEMO</p>
+                                <p><strong>Sales Bracket (GWh):</strong>48GWh Multinational</p>
+                                <p><strong>Customer Segment:</strong>Industrial</p>
+                                <p><strong>Industry Type:</strong>Manufacturing</p>
+                                <p><strong>Industry SubType:</strong>Fuel & Gas</p>
+                                <p><strong>Business Type:</strong>Distribution</p>
+                                <p><strong>Market Segment:</strong> Existing Customer</p>
+                                <p><strong>Market Demographic:</strong>With Afficilate GenCo.</p>
+                                <p><strong>Email:</strong> hello@reallygreatsite.com</p>
+                                <p><strong>Address:</strong> 123 Anywhere St., Any City</p>
+                            </div>
+                            <!-- Biography -->
+                            <div class="mb-4">
+                                <h6 class="text-uppercase font-weight-bold">Biography</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A temporibus suscipit ut
+                                    consectetur. A dolorem accusamus, optio magnam aspernatur totam esse tenetur aliquam
+                                    rerum similique quis? Harum, sapiente quam! Fugit?</p>
+                            </div>
+                            <div class="mb-4">
+                                <h6 class="text-uppercase font-weight-bold">About Us</h6>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ipsa necessitatibus
+                                    quam provident consectetur vitae laborum, corrupti quasi temporibus. Fugiat
+                                    voluptatum officiis debitis, nulla sint rerum quis sed suscipit amet!</p>
+                            </div>
+
+                            <div class="mb-4">
+                                <!-- Branches Section -->
+                                <div class="mb-4">
+                                    <h6 class="text-uppercase font-weight-bold">Branches</h6>
+                                    <div id="branch-map"></div>
+                                    <!-- Map Container -->
+                                    
                                 </div>
+
                             </div>
                         </div>
 
-                        <!-- Customer Address -->
-                        <div class="col-2 col-md-2 ">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-info elevation-1"><i
-                                        class="fas fa-map-marker-alt"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Customer Address</span>
-                                    <span class="info-box-number">Customer Address</span>
-                                </div>
+                        <!-- Right Column: About Us, Skills, and Favorite Brands -->
+                        <div class="col-md-8">
+                            <div class="mb-3">
+                                <div id="load-profile-history-chart" style="height: 300px;"></div>
                             </div>
-                        </div>
-
-                        <!-- Customer Location -->
-                        <div class="col-2 col-md-2 ">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-info elevation-1"><i
-                                        class="fas fa-location-arrow"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Customer Location</span>
-                                    <span class="info-box-number">Within PIEMO/Outside PIEMO</span>
-                                </div>
+                            <!-- Skills Section -->
+                            <div class="mb-4">
+                                <h6 class="text-uppercase font-weight-bold">Psychographics</h6>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Most Common Type</th>
+                                            <th>Average Value</th>
+                                            <th>Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Attribute</td>
+                                            <td>Clean Energy</td>
+                                            <td>+5</td>
+                                            <td>Customers very much prefer clean energy</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Attribute</td>
+                                            <td>Competitive Price</td>
+                                            <td>+3</td>
+                                            <td>Customers generally prefer competitive pricing</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Belief</td>
+                                            <td>Sensitive to Price</td>
+                                            <td>+1</td>
+                                            <td>Many customers are sensitive to price changes</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Practice</td>
+                                            <td>Regular visits by BDD</td>
+                                            <td>+1</td>
+                                            <td>Frequent visits by BDD noted as beneficial</td>
+                                        </tr>
+                                        <!-- Add more rows as needed -->
+                                    </tbody>
+                                </table>
                             </div>
-                        </div>
-
-                        <!-- Customer Segment -->
-                        <div class="col-2 col-md-2 ">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Customer Segment</span>
-                                    <span class="info-box-number">Residential, Commercial</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Industry Type -->
-                        <div class="col-2 col-md-2 ">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-industry"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Industry Type</span>
-                                    <span class="info-box-number">Manufacturing, Malls, Utility</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Business Type -->
-                        <div class="col-2 col-md-2 ">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-briefcase"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Business Type</span>
-                                    <span class="info-box-number">Retail, Distribution</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Customer Type -->
-                        <div class="col-2 col-md-2 ">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-building"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Customer Type</span>
-                                    <span class="info-box-number">Locally Owned, Filipino Owned, Multinational</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Sales Bracket -->
-                        <div class="col-2 col-md-2 ">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-chart-line"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Sales Bracket (GWh)</span>
-                                    <span class="info-box-number">Multinational = 48GWh, Filipino Owned = 27GWh, Local =
-                                        7GWh</span>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-2 col-md-2">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-success elevation-1"><i class="fas fa-cogs"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Growth Rate</span>
-                                    <span class="info-box-number text-success">8% <i class="fas fa-caret-up"></i></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-2 col-md-2">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-globe"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Region</span>
-                                    <span class="info-box-number">NCR</span>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-2 col-md-2">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-danger elevation-1"><i
-                                        class="far fa-lightbulb"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Peak Demand (MW)</span>
-                                    <span class="info-box-number text-danger">5000MW</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-2 col-md-2">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-warning elevation-1"><i
-                                        class="fas fa-arrow-left"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Switching Status</span>
-                                    <span class="info-box-number text-warning">Likely to Switch </span>
+                            <!-- Suppliers Section -->
+                            <div>
+                                <h6 class="text-uppercase font-weight-bold">Retail Energy Suppliers</h6>
+                                <div class="d-flex flex-wrap">
+                                    <!-- Replace with actual brand icons -->
+                                    <div class="m-2" style="text-align: center;">
+                                        <img src="dist/img/AdminLTELogo.png" alt="Brand Icon" style="width: 40px;">
+                                        <p>Supplier A</p>
+                                    </div>
+                                    <div class="m-2" style="text-align: center;">
+                                        <img src="dist/img/AdminLTELogo.png" alt="Brand Icon" style="width: 40px;">
+                                        <p>Supplier B</p>
+                                    </div>
+                                    <div class="m-2" style="text-align: center;">
+                                        <img src="dist/img/AdminLTELogo.png" alt="Brand Icon" style="width: 40px;">
+                                        <p>Supplier C</p>
+                                    </div>
+                                    <div class="m-2" style="text-align: center;">
+                                        <img src="dist/img/AdminLTELogo.png" alt="Brand Icon" style="width: 40px;">
+                                        <p>Supplier D</p>
+                                    </div>
+                                    <!-- Add more icons as needed -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Row 3: Collapsible Section -->
+                    <div class="row mt-4">
+                        <div class="col-md-12">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header text-white">
+                                    <h5 class="mb-0">Additional Information
+                                        <button class="btn btn-link text-white float-right btn-info" type="button"
+                                            data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                                            aria-controls="collapseExample">
+                                            Show/Hide
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div class="collapse" id="collapseExample">
+                                    <div class="card-body">
+                                        <h6 class="text-uppercase font-weight-bold">Additional Data</h6>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Expansion Plans</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <!-- Expansion Plans Table -->
+                                                <div class="row">
+                                                    <section class="col-lg-3 connectedSortable">
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <h3 class="card-title">Plans To Reduce</h3>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <table class="table table-bordered">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Description</th>
+                                                                            <th>When</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+            
+                                                                            <td>Lorem Ipsum
+                                                                            </td>
+                                                                            <td>Date</td>
+                                                                        </tr>
+                                                                        <tr>
+            
+                                                                            <td>Lorem Ipsum</td>
+                                                                            <td>Date</td>
+                                                                        </tr>
+                                                                        <tr>
+            
+                                                                            <td>Lorem Ipsum</td>
+                                                                            <td>Date</td>
+                                                                        </tr>
+                                                                        <tr>
+            
+                                                                            <td>Lorem Ipsum</td>
+                                                                            <td>Date</td>
+                                                                        </tr>
+                                                                        <tr>
+            
+                                                                            <td>Lorem Ipsum</td>
+                                                                            <td>Date</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+            
+                                                    <section class="col-lg-3 connectedSortable">
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <h3 class="card-title">Plans To Maintain</h3>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <table class="table table-bordered">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Description</th>
+                                                                            <th>When</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+            
+                                                                            <td>Lorem Ipsum
+                                                                            </td>
+                                                                            <td>Date</td>
+                                                                        </tr>
+                                                                        <tr>
+            
+                                                                            <td>Lorem Ipsum</td>
+                                                                            <td>Date</td>
+                                                                        </tr>
+                                                                        <tr>
+            
+                                                                            <td>Lorem Ipsum</td>
+                                                                            <td>Date</td>
+                                                                        </tr>
+                                                                        <tr>
+            
+                                                                            <td>Lorem Ipsum</td>
+                                                                            <td>Date</td>
+                                                                        </tr>
+                                                                        <tr>
+            
+                                                                            <td>Lorem Ipsum</td>
+                                                                            <td>Date</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+            
+                                                    <section class="col-lg-3 connectedSortable">
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <h3 class="card-title">Plans To Increase Power</h3>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <table class="table table-bordered">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Description</th>
+                                                                            <th>When</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+            
+                                                                            <td>Lorem Ipsum
+                                                                            </td>
+                                                                            <td>Date</td>
+                                                                        </tr>
+                                                                        <tr>
+            
+                                                                            <td>Lorem Ipsum</td>
+                                                                            <td>Date</td>
+                                                                        </tr>
+                                                                        <tr>
+            
+                                                                            <td>Lorem Ipsum</td>
+                                                                            <td>Date</td>
+                                                                        </tr>
+                                                                        <tr>
+            
+                                                                            <td>Lorem Ipsum</td>
+                                                                            <td>Date</td>
+                                                                        </tr>
+                                                                        <tr>
+            
+                                                                            <td>Lorem Ipsum</td>
+                                                                            <td>Date</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                </div>
-
-                <!-- Main row -->
-
-                <div class="row">
-                    <!-- Box for CUSTOMER_PREFERENCES -->
-                    <section class="col-lg-12 connectedSortable">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h3 class="card-title">Demand Growth Drivers</h3>
-                                        <a href="#" class="btn btn-sm btn-info float-right">View Details</a>
-                                    </div>
-                                    <div class="card-body">
-                                        <div id="demand-growth-chart" style="height: 400px;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h3 class="card-title">Load Profile History</h3>
-                                    </div>
-                                    <div class="card-body">
-                                        <div id="load-profile-history-chart" style="height: 400px;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h3 class="card-title">Emerging Trends</h3>
-                                    </div>
-                                    <div class="card-body">
-                                        <div id="emerging-trends-chart" style="height: 400px;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h3 class="card-title">Demographic Impact</h3>
-                                    </div>
-                                    <div class="card-body">
-                                        <div id="demographic-impact-chart" style="height: 400px;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Expansion Plans</h3>
-                                </div>
-                                <div class="card-body">
-                                    <!-- Expansion Plans Table -->
+                                        <!-- Switching Plans Table -->
                                     <div class="row">
-                                        <section class="col-lg-3 connectedSortable">
+                                        <section class="col-lg-12 connectedSortable">
                                             <div class="card">
                                                 <div class="card-header">
-                                                    <h3 class="card-title">Plans To Reduce</h3>
+                                                    <h3 class="card-title">Switching Information</h3>
                                                 </div>
                                                 <div class="card-body">
                                                     <table class="table table-bordered">
                                                         <thead>
                                                             <tr>
-                                                                <th>Description</th>
-                                                                <th>When</th>
+                                                                <th>RES ID</th>
+                                                                <th>MIRF ID</th>
+                                                                <th>MIRF Effectivity Date</th>
+                                                                <th>MIRF Expiry Date</th>
+                                                                <th>DWSA_ID</th>
+                                                                <th>DWSA Effectivity Date</th>
+                                                                <th>DWA Expiry Date</th>
+                                                                <th>CA ID</th>
+                                                                <th>CA Effectivity Date</th>
+                                                                <th>CA Expiry Date</th>
+                                                                <th>MSA ID</th>
+                                                                <th>MSA Effectivity Date</th>
+                                                                <th>MSA Expiry Date</th>
+                                                                <th>Projected Loss</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             <tr>
 
-                                                                <td>Lorem Ipsum
-                                                                </td>
+                                                                <td>1</td>
+                                                                <td>1</td>
                                                                 <td>Date</td>
+                                                                <td>Date</td>
+                                                                <td>1</td>
+                                                                <td>Date</td>
+                                                                <td>Date</td>
+                                                                <td>1</td>
+                                                                <td>Date</td>
+                                                                <td>Date</td>
+                                                                <td>1</td>
+                                                                <td>Date</td>
+                                                                <td>Date</td>
+                                                                <td>-200</td>
                                                             </tr>
-                                                            <tr>
 
-                                                                <td>Lorem Ipsum</td>
-                                                                <td>Date</td>
-                                                            </tr>
-                                                            <tr>
-
-                                                                <td>Lorem Ipsum</td>
-                                                                <td>Date</td>
-                                                            </tr>
-                                                            <tr>
-
-                                                                <td>Lorem Ipsum</td>
-                                                                <td>Date</td>
-                                                            </tr>
-                                                            <tr>
-
-                                                                <td>Lorem Ipsum</td>
-                                                                <td>Date</td>
-                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
                                             </div>
                                         </section>
 
-                                        <section class="col-lg-3 connectedSortable">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h3 class="card-title">Plans To Maintain</h3>
-                                                </div>
-                                                <div class="card-body">
-                                                    <table class="table table-bordered">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Description</th>
-                                                                <th>When</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
 
-                                                                <td>Lorem Ipsum
-                                                                </td>
-                                                                <td>Date</td>
-                                                            </tr>
-                                                            <tr>
-
-                                                                <td>Lorem Ipsum</td>
-                                                                <td>Date</td>
-                                                            </tr>
-                                                            <tr>
-
-                                                                <td>Lorem Ipsum</td>
-                                                                <td>Date</td>
-                                                            </tr>
-                                                            <tr>
-
-                                                                <td>Lorem Ipsum</td>
-                                                                <td>Date</td>
-                                                            </tr>
-                                                            <tr>
-
-                                                                <td>Lorem Ipsum</td>
-                                                                <td>Date</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </section>
-
-                                        <section class="col-lg-3 connectedSortable">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h3 class="card-title">Plans To Increase Power</h3>
-                                                </div>
-                                                <div class="card-body">
-                                                    <table class="table table-bordered">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Description</th>
-                                                                <th>When</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-
-                                                                <td>Lorem Ipsum
-                                                                </td>
-                                                                <td>Date</td>
-                                                            </tr>
-                                                            <tr>
-
-                                                                <td>Lorem Ipsum</td>
-                                                                <td>Date</td>
-                                                            </tr>
-                                                            <tr>
-
-                                                                <td>Lorem Ipsum</td>
-                                                                <td>Date</td>
-                                                            </tr>
-                                                            <tr>
-
-                                                                <td>Lorem Ipsum</td>
-                                                                <td>Date</td>
-                                                            </tr>
-                                                            <tr>
-
-                                                                <td>Lorem Ipsum</td>
-                                                                <td>Date</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </section>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>
             </section>
 
@@ -651,10 +680,10 @@
     <!-- AdminLTE App -->
     <script src="dist/js/adminlte.js"></script>
     <!-- Highcharts -->
-  <script src="dist/js/highchart.js"></script>
-  <script src="dist/js/highchart-export.js"></script>
-  <script src="dist/js/highchart-export-data.js"></script>
-  <script src="dist/js/highchart-accessibility.js"></script>
+    <script src="dist/js/highchart.js"></script>
+    <script src="dist/js/highchart-export.js"></script>
+    <script src="dist/js/highchart-export-data.js"></script>
+    <script src="dist/js/highchart-accessibility.js"></script>
 
     <!-- Custom JS -->
     <script>
@@ -709,161 +738,59 @@
                 },
 
             });
-            // Demand Growth Drivers Chart
-            Highcharts.chart('demand-growth-chart', {
-                chart: {
-                    type: 'column'
-                },
-                title: {
-                    text: 'Demand Growth Drivers'
-                },
-                xAxis: {
-                    categories: ['October 2024', 'November 2024', 'December 2024', 'January 2025', 'February 2025'],
-                    crosshair: true
-                },
-                yAxis: {
-                    min: 0,
-                    title: {
-                        text: 'Growth (%)'
-                    }
-                },
-                tooltip: {
-                    shared: true
-                },
-                plotOptions: {
-                    column: {
-                        pointPadding: 0.2,
-                        borderWidth: 0
-                    }
-                },
-                series: [{
-                    name: 'Increase in Production',
-                    data: [20, 25, 30, 40, 50]
-                }, {
-                    name: 'Decrease in Operational Cost',
-                    data: [30, 35, 40, 50, 60]
-                }, {
-                    name: 'Decrease in Supply Cost',
-                    data: [40, 45, 50, 60, 70]
-                }]
-            });
 
             // Load Profile History Chart
             Highcharts.chart('load-profile-history-chart', {
                 chart: {
-                    type: 'line'
+                    type: 'line',
                 },
                 title: {
-                    text: 'Load Profile History'
+                    text: 'Load Profile History',
                 },
                 xAxis: {
-                    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 },
                 yAxis: {
                     title: {
-                        text: 'Load (MW)'
-                    }
-                },
-                tooltip: {
-                    shared: true
+                        text: 'Load Profile (kWh)',
+                    },
                 },
                 series: [{
-                    name: '2023',
-                    data: [100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210]
+                    name: '2020',
+                    data: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200],
                 }, {
-                    name: '2024',
-                    data: [110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220]
-                }]
-            });
-
-            // Emerging Trends Chart
-            Highcharts.chart('emerging-trends-chart', {
-                chart: {
-                    type: 'line'
-                },
-                title: {
-                    text: 'Emerging Trends'
-                },
-                tooltip: {
-                    pointFormat: '{series.name}: <b>{point.y}%</b>'
-                },
-                xAxis: {
-                    categories: ['January', 'February', 'March', 'April', 'May'], // Example categories (e.g., months)
-                    title: {
-                        text: 'Time'
-                    }
-                },
-                yAxis: {
-                    title: {
-                        text: 'Percentage'
-                    }
-                },
-                plotOptions: {
-                    line: {
-                        dataLabels: {
-                            enabled: true,
-                            format: '{y} %'
-                        },
-                        enableMouseTracking: true
-                    }
-                },
-                series: [{
-                    name: 'Trend A',
-                    data: [40, 42, 45, 50, 55] // Example data points for Trend A
-                }, {
-                    name: 'Trend B',
-                    data: [30, 32, 35, 37, 40] // Example data points for Trend B
-                }, {
-                    name: 'Trend C',
-                    data: [20, 22, 25, 28, 30] // Example data points for Trend C
-                }, {
-                    name: 'Trend D',
-                    data: [10, 12, 15, 18, 20] // Example data points for Trend D
-                }]
-            });
-
-
-            // Demographic Impact Chart
-            Highcharts.chart('demographic-impact-chart', {
-                chart: {
-                    type: 'column'
-                },
-                title: {
-                    text: 'Demographic Impact'
-                },
-                xAxis: {
-                    categories: ['Group A', 'Group B', 'Group C', 'Group D', 'Group E', 'Group F'],
-                    title: {
-                        text: 'Demographic Groups'
-                    }
-                },
-                yAxis: {
-                    min: 0,
-                    title: {
-                        text: 'Impact Score'
-                    }
-                },
-                legend: {
-                    reversed: true
-                },
-                plotOptions: {
-                    series: {
-                        stacking: 'normal'
-                    }
-                },
-                series: [{
-                    name: 'Something',
-                    data: [5, 3, 4, 7, 2, 1]
-                }, {
-                    name: 'Something',
-                    data: [2, 2, 3, 2, 1, 3]
-                }, {
-                    name: 'Something',
-                    data: [3, 4, 4, 2, 5, 4]
-                }]
+                    name: '2021',
+                    data: [200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300],
+                }],
             });
         });
+    </script>
+    <!-- MAP LEAFLET -->
+    <script src="dist/js/leaflet.js"></script>
+    <script>
+        // Initialize Leaflet Map
+        var map = L.map('branch-map').setView([37.7749, -122.4194], 4);  // Center map on San Francisco with a zoom level of 4
 
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // Branch locations array
+        var branches = [
+            { lat: 16.5662, lng: 121.2626, name: 'Luzon' },  // Example branch location
+            { lat: 11.0000, lng: 123.5000, name: 'Visayas' },  // Example branch location
+            { lat: 8.4803, lng: 124.6498, name: 'Mindanao' }  // Example branch location
+        ];
+
+        // Add markers for each branch
+        branches.forEach(function (branch) {
+            L.marker([branch.lat, branch.lng])
+                .addTo(map)
+                .bindPopup(`<b>${branch.name}</b>`)
+                .openPopup();
+        });
     </script>
 
 
